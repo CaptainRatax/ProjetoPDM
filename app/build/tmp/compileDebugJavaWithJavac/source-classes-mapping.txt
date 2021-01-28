@@ -1,32 +1,18 @@
-com/example/projetopdm/BuildConfig.java
- com.example.projetopdm.BuildConfig
-com/example/projetopdm/ui/login/LoggedInUserView.java
- com.example.projetopdm.ui.login.LoggedInUserView
-com/example/projetopdm/data/LoginDataSource.java
- com.example.projetopdm.data.LoginDataSource
-com/example/projetopdm/ui/login/LoginFormState.java
- com.example.projetopdm.ui.login.LoginFormState
-com/example/projetopdm/data/LoginRepository.java
- com.example.projetopdm.data.LoginRepository
-com/example/projetopdm/data/model/LoggedInUser.java
- com.example.projetopdm.data.model.LoggedInUser
-com/example/projetopdm/ui/login/LoginResult.java
- com.example.projetopdm.ui.login.LoginResult
-com/example/projetopdm/data/Result.java
- com.example.projetopdm.data.Result
- com.example.projetopdm.data.Result$1
- com.example.projetopdm.data.Result$Error
- com.example.projetopdm.data.Result$Success
-com/example/projetopdm/MainActivity.java
- com.example.projetopdm.MainActivity
-com/example/projetopdm/ui/login/LoginViewModel.java
- com.example.projetopdm.ui.login.LoginViewModel
-com/example/projetopdm/ui/login/LoginViewModelFactory.java
- com.example.projetopdm.ui.login.LoginViewModelFactory
-com/example/projetopdm/ui/login/LoginActivity.java
- com.example.projetopdm.ui.login.LoginActivity
- com.example.projetopdm.ui.login.LoginActivity$1
- com.example.projetopdm.ui.login.LoginActivity$2
- com.example.projetopdm.ui.login.LoginActivity$3
- com.example.projetopdm.ui.login.LoginActivity$4
- com.example.projetopdm.ui.login.LoginActivity$5
+com/example/testlogin/User.java
+ com.example.testlogin.User
+com/example/testlogin/HomeActivity.java
+ com.example.testlogin.HomeActivity
+com/example/testlogin/BuildConfig.java
+ com.example.testlogin.BuildConfig
+com/example/testlogin/retrofit/RetrofitClient.java
+ com.example.testlogin.retrofit.RetrofitClient
+com/example/testlogin/api/Api.java
+ com.example.testlogin.api.Api
+com/example/testlogin/MainActivity.java
+ com.example.testlogin.MainActivity
+ com.example.testlogin.MainActivity$1
+com/example/testlogin/Api.java
+ com.example.testlogin.Api
+ com.example.testlogin.Api$1
+ com.example.testlogin.Api$2
+ com.example.testlogin.Api$3
