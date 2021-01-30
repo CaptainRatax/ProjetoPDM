@@ -1,6 +1,7 @@
 package com.example.projetopdmgrupo3;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Context;
 import android.content.Intent;
@@ -18,22 +19,18 @@ import com.example.projetopdmgrupo3.models.UserLogged;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
-import org.json.JSONObject;
-
-import java.io.IOException;
-
-import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     BaseDadosLocal db = new BaseDadosLocal(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         UserLogged userLogged;
         userLogged = db.getUserLogged();
         if(userLogged != null){
@@ -44,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         }else{
             db.addUserLogged(new UserLogged("None", "None", "None", "None", 0));
         }
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
         Button btn_login = (Button) findViewById(R.id.btn_login);
         EditText edit_email = (EditText) findViewById(R.id.edit_email_login);
         EditText edit_password = (EditText) findViewById(R.id.edit_password_login);
@@ -77,30 +74,30 @@ public class MainActivity extends AppCompatActivity {
                                                 Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                                                 startActivity(intent);
                                             }else{
-                                                Toast.makeText(MainActivity.this, "Email ou Password incorretos!", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(LoginActivity.this, "Email ou Password incorretos!", Toast.LENGTH_SHORT).show();
                                             }
                                         }else{
-                                            Toast.makeText(MainActivity.this, "Email ou Password incorretos!", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(LoginActivity.this, "Email ou Password incorretos!", Toast.LENGTH_SHORT).show();
                                         }
                                     }else{
-                                        Toast.makeText(MainActivity.this, "Email ou Password incorretos!", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(LoginActivity.this, "Email ou Password incorretos!", Toast.LENGTH_SHORT).show();
                                     }
                                 }
 
                                 @Override
                                 public void onFailure(Call<JsonObject> call, Throwable t) {
-                                    Toast.makeText(MainActivity.this, "Error: " + t.getMessage(), Toast.LENGTH_LONG).show();
+                                    Toast.makeText(LoginActivity.this, "Error: " + t.getMessage(), Toast.LENGTH_LONG).show();
                                 }
                             });
                         }else{
-                            Toast.makeText(MainActivity.this, "A password não pode estar vazia!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "A password não pode estar vazia!", Toast.LENGTH_SHORT).show();
                         }
                     }else{
-                        Toast.makeText(MainActivity.this, "Email inválido!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginActivity.this, "Email inválido!", Toast.LENGTH_SHORT).show();
                     }
 
                 }else{
-                    Toast.makeText(MainActivity.this, "Sem conexão à internet :(", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Sem conexão à internet :(", Toast.LENGTH_SHORT).show();
                 }
             }
         });
