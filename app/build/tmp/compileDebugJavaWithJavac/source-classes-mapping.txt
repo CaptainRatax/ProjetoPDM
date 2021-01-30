@@ -7,10 +7,10 @@ com/example/projetopdmgrupo3/models/UserLogged.java
  com.example.projetopdmgrupo3.models.UserLogged
 com/example/projetopdmgrupo3/BaseDadosLocal.java
  com.example.projetopdmgrupo3.BaseDadosLocal
-com/example/projetopdmgrupo3/MainActivity.java
- com.example.projetopdmgrupo3.MainActivity
- com.example.projetopdmgrupo3.MainActivity$1
- com.example.projetopdmgrupo3.MainActivity$1$1
+com/example/projetopdmgrupo3/LoginActivity.java
+ com.example.projetopdmgrupo3.LoginActivity
+ com.example.projetopdmgrupo3.LoginActivity$1
+ com.example.projetopdmgrupo3.LoginActivity$1$1
 com/example/projetopdmgrupo3/BuildConfig.java
  com.example.projetopdmgrupo3.BuildConfig
 com/example/projetopdmgrupo3/RetrofitClient.java

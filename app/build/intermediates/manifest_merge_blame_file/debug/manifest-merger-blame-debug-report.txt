@@ -39,9 +39,9 @@
 25        <activity android:name="com.example.projetopdmgrupo3.HomeActivity" />
 25-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:15:9-59
 25-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:15:19-47
-26        <activity android:name="com.example.projetopdmgrupo3.MainActivity" >
+26        <activity android:name="com.example.projetopdmgrupo3.LoginActivity" >
 26-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:16:9-22:20
-26-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:16:19-47
+26-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:16:19-48
 27            <intent-filter>
 27-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:17:13-21:29
 28                <action android:name="android.intent.action.MAIN" />

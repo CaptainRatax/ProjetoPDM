@@ -85,10 +85,10 @@ activity#com.example.projetopdmgrupo3.HomeActivity
 ADDED from C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:15:9-59
 	android:name
 		ADDED from C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:15:19-47
-activity#com.example.projetopdmgrupo3.MainActivity
+activity#com.example.projetopdmgrupo3.LoginActivity
 ADDED from C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:16:9-22:20
 	android:name
-		ADDED from C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:16:19-47
+		ADDED from C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:16:19-48
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:17:13-21:29
 action#android.intent.action.MAIN

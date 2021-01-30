@@ -23,7 +23,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.ProjetoPDMGrupo3" >
         <activity android:name="com.example.projetopdmgrupo3.HomeActivity" />
-        <activity android:name="com.example.projetopdmgrupo3.MainActivity" >
+        <activity android:name="com.example.projetopdmgrupo3.LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
