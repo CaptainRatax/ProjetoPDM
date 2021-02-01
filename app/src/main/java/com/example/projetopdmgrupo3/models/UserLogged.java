@@ -6,6 +6,7 @@ public class UserLogged {
     String telefone;
     String nome;
     String dataNascimento;
+    String imagem;
     int isLoggedIn;
 
     //Usado para instancia
@@ -14,21 +15,23 @@ public class UserLogged {
     }
 
     //Usado para Update
-    public UserLogged(int id, String email, String telefone, String nome, String dataNascimento, int isLoggedIn) {
+    public UserLogged(int id, String email, String telefone, String nome, String dataNascimento, String imagem, int isLoggedIn) {
         this.id = id;
         this.email = email;
         this.telefone = telefone;
         this.nome = nome;
         this.dataNascimento = dataNascimento;
+        this.imagem = imagem;
         this.isLoggedIn = isLoggedIn;
     }
 
     //Usado para Insert
-    public UserLogged(String email, String telefone, String nome, String dataNascimento, int isLoggedIn) {
+    public UserLogged(String email, String telefone, String nome, String dataNascimento, String imagem, int isLoggedIn) {
         this.email = email;
         this.telefone = telefone;
         this.nome = nome;
         this.dataNascimento = dataNascimento;
+        this.imagem = imagem;
         this.isLoggedIn = isLoggedIn;
     }
 
@@ -72,6 +75,14 @@ public class UserLogged {
 
     public void setDataNascimento(String dataNascimento) {
         this.dataNascimento = dataNascimento;
+    }
+
+    public String getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
     }
 
     public int getIsLoggedIn() {

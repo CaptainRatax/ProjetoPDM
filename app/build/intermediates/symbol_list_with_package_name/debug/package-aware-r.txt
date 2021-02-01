@@ -201,6 +201,10 @@ attr chipStrokeWidth
 attr chipStyle
 attr chipSurfaceColor
 attr circleRadius
+attr civ_border_color
+attr civ_border_overlay
+attr civ_border_width
+attr civ_circle_background_color
 attr clickAction
 attr closeIcon
 attr closeIconEnabled
@@ -1542,6 +1546,12 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable empty_avatar
+drawable ic_baseline_camera_alt_24
+drawable ic_baseline_exit_to_app_24
+drawable ic_baseline_menu_24
+drawable ic_baseline_person_24
+drawable ic_baseline_qr_code_scanner_24
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_mtrl_checked_circle
@@ -1722,6 +1732,7 @@ id dragLeft
 id dragRight
 id dragStart
 id dragUp
+id drawer_layout
 id dropdown_menu
 id easeIn
 id easeInOut
@@ -1745,6 +1756,7 @@ id fixed
 id flip
 id floating
 id forever
+id fragment_container
 id ghost_view
 id ghost_view_holder
 id gone
@@ -1811,6 +1823,10 @@ id mtrl_picker_text_input_range_end
 id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id multiply
+id nav_logout
+id nav_profile
+id nav_qrcode
+id nav_view
 id navigation_header_container
 id never
 id noScroll
@@ -1836,6 +1852,7 @@ id percent
 id pin
 id position
 id postLayout
+id profile_image
 id progress_circular
 id progress_horizontal
 id radio
@@ -1932,6 +1949,7 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
+id toolbar
 id top
 id topPanel
 id touch_outside
@@ -1948,6 +1966,8 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id userEmail
+id userName
 id view_offset_helper
 id visible
 id withText
@@ -2061,6 +2081,7 @@ layout mtrl_picker_header_title_text
 layout mtrl_picker_header_toggle
 layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
+layout nav_header
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big
@@ -2085,6 +2106,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+menu menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
@@ -2119,6 +2141,7 @@ string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
 string button
+string camera
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
@@ -2170,6 +2193,8 @@ string mtrl_picker_toggle_to_calendar_input_mode
 string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
+string navigation_drawer_close
+string navigation_drawer_open
 string password
 string password_toggle_content_description
 string path_password_eye
@@ -2640,6 +2665,7 @@ style Theme_MaterialComponents_Light_NoActionBar_Bridge
 style Theme_MaterialComponents_NoActionBar
 style Theme_MaterialComponents_NoActionBar_Bridge
 style Theme_ProjetoPDMGrupo3
+style Theme_ProjetoPDMGrupo3_NoActionBar
 style ThemeOverlay_AppCompat
 style ThemeOverlay_AppCompat_ActionBar
 style ThemeOverlay_AppCompat_Dark
@@ -2897,6 +2923,7 @@ styleable ButtonBarLayout allowStacking
 styleable CardView android_minWidth android_minHeight cardBackgroundColor cardCornerRadius cardElevation cardMaxElevation cardPreventCornerOverlap cardUseCompatPadding contentPadding contentPaddingBottom contentPaddingLeft contentPaddingRight contentPaddingTop
 styleable Chip android_textAppearance android_textColor android_ellipsize android_maxWidth android_text android_checkable checkedIcon checkedIconEnabled checkedIconTint checkedIconVisible chipBackgroundColor chipCornerRadius chipEndPadding chipIcon chipIconEnabled chipIconSize chipIconTint chipIconVisible chipMinHeight chipMinTouchTargetSize chipStartPadding chipStrokeColor chipStrokeWidth chipSurfaceColor closeIcon closeIconEnabled closeIconEndPadding closeIconSize closeIconStartPadding closeIconTint closeIconVisible ensureMinTouchTargetSize hideMotionSpec iconEndPadding iconStartPadding rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec textEndPadding textStartPadding
 styleable ChipGroup checkedChip chipSpacing chipSpacingHorizontal chipSpacingVertical selectionRequired singleLine singleSelection
+styleable CircleImageView civ_border_color civ_border_overlay civ_border_width civ_circle_background_color
 styleable CollapsingToolbarLayout collapsedTitleGravity collapsedTitleTextAppearance contentScrim expandedTitleGravity expandedTitleMargin expandedTitleMarginBottom expandedTitleMarginEnd expandedTitleMarginStart expandedTitleMarginTop expandedTitleTextAppearance maxLines scrimAnimationDuration scrimVisibleHeightTrigger statusBarScrim title titleEnabled toolbarId
 styleable CollapsingToolbarLayout_Layout layout_collapseMode layout_collapseParallaxMultiplier
 styleable ColorStateListItem android_color android_alpha alpha
