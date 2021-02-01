@@ -7,4 +7,13 @@
     <string name="camera">Camera</string>
     <string name="navigation_drawer_open">Open Navigation Drawer</string>
     <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <string name="id_da_obra">Id da Obra</string>
+    <string name="inspecionar">Inspecionar</string>
+    <string name="user_example">User Example</string>
+    <string name="user_emailexample_com">user@emailexample.com</string>
+    <string name="p_gina_inicial">Página Inicial</string>
+    <string name="ler_c_digo_qr">Ler Código QR</string>
+    <string name="perfil">Perfil</string>
+    <string name="logout">Logout</string>
+    <string name="bem_vindo_utilizador">Bem vindo Utilizador!</string>
 </resources>

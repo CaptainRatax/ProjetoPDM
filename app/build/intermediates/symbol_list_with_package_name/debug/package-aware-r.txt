@@ -1549,6 +1549,7 @@ drawable design_snackbar_background
 drawable empty_avatar
 drawable ic_baseline_camera_alt_24
 drawable ic_baseline_exit_to_app_24
+drawable ic_baseline_home_24
 drawable ic_baseline_menu_24
 drawable ic_baseline_person_24
 drawable ic_baseline_qr_code_scanner_24
@@ -1677,8 +1678,9 @@ id beginning
 id blocking
 id bottom
 id bounce
+id btn_codigoQR
+id btn_inspecionar
 id btn_login
-id button2
 id buttonPanel
 id cache_measures
 id cancel_button
@@ -1737,6 +1739,7 @@ id dropdown_menu
 id easeIn
 id easeInOut
 id easeOut
+id edit_ObraId
 id edit_email_login
 id edit_password_login
 id edit_query
@@ -1756,7 +1759,6 @@ id fixed
 id flip
 id floating
 id forever
-id fragment_container
 id ghost_view
 id ghost_view_holder
 id gone
@@ -1823,6 +1825,7 @@ id mtrl_picker_text_input_range_end
 id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id multiply
+id nav_home
 id nav_logout
 id nav_profile
 id nav_qrcode
@@ -1936,6 +1939,9 @@ id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textView
+id textView2
+id textView3
 id text_input_end_icon
 id text_input_start_icon
 id textinput_counter
@@ -1961,6 +1967,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id txt_BemVindo
 id unchecked
 id uniform
 id unlabeled
@@ -2037,6 +2044,9 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_home
 layout activity_login
+layout activity_obra
+layout activity_profile
+layout activity_qr_code_reader
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2139,6 +2149,7 @@ string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string app_name
 string appbar_scrolling_view_behavior
+string bem_vindo_utilizador
 string bottom_sheet_behavior
 string button
 string camera
@@ -2154,8 +2165,12 @@ string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string id_da_obra
+string inspecionar
 string item_view_role_description
+string ler_c_digo_qr
 string login
+string logout
 string material_slider_range_end
 string material_slider_range_start
 string mtrl_badge_numberless_content_description
@@ -2195,14 +2210,18 @@ string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
 string navigation_drawer_close
 string navigation_drawer_open
+string p_gina_inicial
 string password
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string perfil
 string search_menu_title
 string status_bar_notification_info_overflow
+string user_emailexample_com
+string user_example
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow

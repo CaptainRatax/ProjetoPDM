@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
-        android:text="User Example"
+        android:text="@string/user_example"
         android:id="@+id/userName"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
@@ -26,6 +26,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/userEmail"
-        android:text="user@emailexample.com" />
+        android:text="@string/user_emailexample_com" />
 
 </LinearLayout>

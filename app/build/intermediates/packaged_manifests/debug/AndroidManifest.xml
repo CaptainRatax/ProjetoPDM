@@ -22,6 +22,9 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.ProjetoPDMGrupo3" >
+        <activity android:name="com.example.projetopdmgrupo3.ProfileActivity" />
+        <activity android:name="com.example.projetopdmgrupo3.ObraActivity" />
+        <activity android:name="com.example.projetopdmgrupo3.QrCodeReaderActivity" />
         <activity
             android:name="com.example.projetopdmgrupo3.HomeActivity"
             android:theme="@style/Theme.ProjetoPDMGrupo3.NoActionBar" />
