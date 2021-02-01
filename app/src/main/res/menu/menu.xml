@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <!-- <item
-        android:id="@+id/camera"
-        android:icon="@drawable/ic_baseline_camera_alt_24"
-        android:title="@string/camera"
-        app:showAsAction="always" /> -->
-
     <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/p_gina_inicial" />
         <item
             android:id="@+id/nav_qrcode"
             android:icon="@drawable/ic_baseline_qr_code_scanner_24"
-            android:title="Read QR Code" />
+            android:title="@string/ler_c_digo_qr" />
         <item
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_baseline_person_24"
-            android:title="Profile" />
+            android:title="@string/perfil" />
         <item
             android:id="@+id/nav_logout"
             android:icon="@drawable/ic_baseline_exit_to_app_24"
-            android:title="Logout" />
+            android:title="@string/logout" />
     </group>
 
 </menu>

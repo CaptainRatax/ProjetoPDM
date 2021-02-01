@@ -12,8 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetoPDMGrupo3">
-        <activity android:name=".HomeActivity"
-            android:theme="@style/Theme.ProjetoPDMGrupo3.NoActionBar"></activity>
+        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".ObraActivity" />
+        <activity android:name=".QrCodeReaderActivity" />
+        <activity
+            android:name=".HomeActivity"
+            android:theme="@style/Theme.ProjetoPDMGrupo3.NoActionBar" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
