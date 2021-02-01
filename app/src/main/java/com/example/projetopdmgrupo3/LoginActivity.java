@@ -39,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         }else{
-            db.addUserLogged(new UserLogged("None", "None", "None", "None", 0));
+            db.addUserLogged(new UserLogged("None", "None", "None", "None", "None", 0));
         }
         setContentView(R.layout.activity_login);
         Button btn_login = (Button) findViewById(R.id.btn_login);
@@ -62,12 +62,14 @@ public class LoginActivity extends AppCompatActivity {
                                     if(response.body() != null){
                                         if(response.body().get("Success").getAsBoolean()){
                                             if(response.body().get("RequestCode").getAsInt() == 200){
+                                                JsonObject inspecionador = response.body().get("Inspecionador").getAsJsonObject();
                                                 UserLogged userLogged = new UserLogged(
                                                         1,
-                                                        response.body().get("Inspecionador").getAsJsonObject().get("Email").getAsString(),
-                                                        response.body().get("Inspecionador").getAsJsonObject().get("Telefone").getAsString(),
-                                                        response.body().get("Inspecionador").getAsJsonObject().get("Nome").getAsString(),
-                                                        response.body().get("Inspecionador").getAsJsonObject().get("DataNascimento").getAsString(),
+                                                        inspecionador.get("Email").getAsString(),
+                                                        inspecionador.get("Telefone").getAsString(),
+                                                        inspecionador.get("Nome").getAsString(),
+                                                        inspecionador.get("DataNascimento").getAsString(),
+                                                        inspecionador.get("Imagem").getAsString(),
                                                         1
                                                 );
                                                 db.userLogin(userLogged);
