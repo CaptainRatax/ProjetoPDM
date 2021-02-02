@@ -5,13 +5,24 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.Manifest;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Base64;
 import android.view.MenuItem;
 import android.view.View;
@@ -20,10 +31,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.projetopdmgrupo3.models.Obra;
 import com.example.projetopdmgrupo3.models.UserLogged;
 import com.google.android.material.navigation.NavigationView;
+import com.google.gson.JsonObject;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -32,6 +48,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     UserLogged userLogged;
 
     BaseDadosLocal db = new BaseDadosLocal(this);
+
+    private static final int PERMISSION_REQUEST_CODE = 200;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,15 +92,19 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         btn_lerCodigoQR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), QrCodeReaderActivity.class);
-                startActivity(intent);
+                if(checkPermission()){ // método que verifica se tem permissão para usar a câmara
+                    Intent intent = new Intent(getApplicationContext(), QrCodeReaderActivity.class);
+                    startActivity(intent);
+                }else{
+                    requestPermission();
+                    Toast.makeText(HomeActivity.this, "É necessário aceitar a permissão da câmara!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
         btn_inspecionar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ObraActivity.class);
                 EditText edit_ObraId = (EditText) findViewById(R.id.edit_ObraId);
                 int obraId = 0;
                 try {
@@ -91,8 +113,72 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                     Toast.makeText(HomeActivity.this, "Id da obra inválido!", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                intent.putExtra("ObraId", obraId);
-                startActivity(intent);
+                if (obraId==0){
+                    Toast.makeText(HomeActivity.this, "Id da obra inválido!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if(isNetworkAvailable()){
+                    Call<JsonObject> call = RetrofitClient.getInstance().getMyApi().getObraById(obraId);
+                    call.enqueue(new Callback<JsonObject>() {
+                        @Override
+                        public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+                            if(response.body() != null) {
+                                if (response.body().get("Success").getAsBoolean()) {
+                                    if (response.body().get("RequestCode").getAsInt() == 200) {
+                                        JsonObject obraJson = response.body().get("Obra").getAsJsonObject();
+                                        JsonObject clienteJson = response.body().get("Cliente").getAsJsonObject();
+                                        Intent intent = new Intent(getApplicationContext(), ConfirmaObraActivity.class);
+                                        try {
+                                            //passar todos os dados da obra pelo intent
+                                            intent.putExtra("OBRAID", obraJson.get("Id").getAsInt());
+                                            intent.putExtra("OBRALOCALIDADE", obraJson.get("Localidade").getAsString());
+                                            intent.putExtra("OBRAMORADA", obraJson.get("Morada").getAsString());
+                                            intent.putExtra("OBRACODIGOPOSTAL", obraJson.get("CodigoPostal").getAsString());
+                                            intent.putExtra("OBRAIDCLIENTE", obraJson.get("IdCliente").getAsInt());
+                                            intent.putExtra("OBRACREATEDAT", obraJson.get("CreatedAt").getAsString());
+
+                                            //passar todos os dados do cliente pelo intent
+                                            intent.putExtra("CLIENTEID", clienteJson.get("Id").getAsInt());
+                                            intent.putExtra("CLIENTENOME", clienteJson.get("Nome").getAsString());
+                                            intent.putExtra("CLIENTEEMAIL", clienteJson.get("Email").getAsString());
+                                            intent.putExtra("CLIENTETELEFONE", clienteJson.get("Telefone").getAsString());
+                                            intent.putExtra("CLIENTEDATANASCIMENTO", clienteJson.get("DataNascimento").getAsString());
+                                            intent.putExtra("CLIENTECREATEDAT", clienteJson.get("CreatedAt").getAsString());
+                                        }catch(Exception e){
+                                            Toast.makeText(HomeActivity.this, "Ups. Algo correu mal...", Toast.LENGTH_LONG).show();
+                                            return;
+                                        }
+                                        startActivity(intent);
+                                    }else if(response.body().get("RequestCode").getAsInt() == 404){
+                                        try {
+                                            Toast.makeText(HomeActivity.this, response.body().get("Message").getAsString(), Toast.LENGTH_LONG).show();
+                                        }catch (Exception err){
+                                            Toast.makeText(HomeActivity.this, "Ups. Algo correu mal...", Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+                                }else{
+                                    if(response.body().get("RequestCode").getAsInt() == 404) {
+                                        try {
+                                            Toast.makeText(HomeActivity.this, response.body().get("Message").getAsString(), Toast.LENGTH_LONG).show();
+                                        } catch (Exception err) {
+                                            Toast.makeText(HomeActivity.this, "Ups. Algo correu mal...", Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+                                }
+                            }else{
+                                Toast.makeText(HomeActivity.this, "Ups. Algo correu mal...", Toast.LENGTH_LONG).show();
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<JsonObject> call, Throwable t) {
+                            Toast.makeText(HomeActivity.this, "Ups. Algo correu mal...", Toast.LENGTH_LONG).show();
+                        }
+                    });
+                }else{
+                    Toast.makeText(HomeActivity.this, "Sem conexão à internet :(", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -114,8 +200,13 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             }
             case R.id.nav_qrcode:
             {
-                Intent intent = new Intent(getApplicationContext(), QrCodeReaderActivity.class);
-                startActivity(intent);
+                if(checkPermission()){ // método que verifica se tem permissão para usar a câmara
+                    Intent intent = new Intent(getApplicationContext(), QrCodeReaderActivity.class);
+                    startActivity(intent);
+                }else{
+                    requestPermission();
+                    Toast.makeText(HomeActivity.this, "É necessário aceitar a permissão da câmara!", Toast.LENGTH_SHORT).show();
+                }
                 break;
             }
             case R.id.nav_profile:
@@ -144,4 +235,66 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             return;
         }
     }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case PERMISSION_REQUEST_CODE:
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Intent intent = new Intent(getApplicationContext(), QrCodeReaderActivity.class);
+                    startActivity(intent);
+                } else {
+                    NavigationView navigationView = findViewById(R.id.nav_view);
+                    navigationView.setCheckedItem(R.id.nav_home);
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
+                                != PackageManager.PERMISSION_GRANTED) {
+                            showMessageOKCancel("É necessário aceitar a permissão da câmara!",
+                                    new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                                                requestPermission();
+                                            }
+                                        }
+                                    });
+                        }
+                    }
+                }
+                break;
+        }
+    }
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+
+    private boolean checkPermission() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
+                != PackageManager.PERMISSION_GRANTED) {
+            // Permission is not granted
+            return false;
+        }
+        return true;
+    }
+
+    private void requestPermission() {
+
+        ActivityCompat.requestPermissions(this,
+                new String[]{Manifest.permission.CAMERA},
+                PERMISSION_REQUEST_CODE);
+    }
+
+    private void showMessageOKCancel(String message, DialogInterface.OnClickListener okListener) {
+        new AlertDialog.Builder(HomeActivity.this)
+                .setMessage(message)
+                .setPositiveButton("Aceitar", okListener)
+                .setNegativeButton("Cancelar", null)
+                .create()
+                .show();
+    }
+
 }
