@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Projeto PDM Grupo 3</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
@@ -9,11 +9,28 @@
     <string name="navigation_drawer_close">Close Navigation Drawer</string>
     <string name="id_da_obra">Id da Obra</string>
     <string name="inspecionar">Inspecionar</string>
-    <string name="ler_c_digo_qr">Ler Código QR</string>
     <string name="user_example">User Example</string>
     <string name="user_emailexample_com">user@emailexample.com</string>
     <string name="p_gina_inicial">Página Inicial</string>
+    <string name="ler_c_digo_qr">Ler Código QR</string>
     <string name="perfil">Perfil</string>
     <string name="logout">Logout</string>
     <string name="bem_vindo_utilizador">Bem vindo Utilizador!</string>
+    <string name="c_digo_postal">Código Postal: </string>
+    <string name="detalhes_da_obra">Detalhes da Obra</string>
+    <string name="localidade">localidade</string>
+    <string name="morada">Morada: </string>
+    <string name="morada1">morada</string>
+    <string name="localidade1">Localidade: </string>
+    <string name="codigo_postal">codigo postal</string>
+    <string name="nome">Nome: </string>
+    <string name="detalhes_do_cliente">Detalhes do Cliente</string>
+    <string name="nome1">nome</string>
+    <string name="email1">Email: </string>
+    <string name="email2">email</string>
+    <string name="telefone">Telefone: </string>
+    <string name="telefone1">telefone</string>
+    <string name="confirme_os_dados">Confirme os dados</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="confirmar">Confirmar</string>
 </resources>
