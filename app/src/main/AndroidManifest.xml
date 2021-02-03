@@ -16,8 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetoPDMGrupo3">
         <activity android:name=".ProfileActivity"></activity>
-        <activity android:name=".ConfirmaObraActivity"
-            android:theme="@style/Theme.ProjetoPDMGrupo3.NoActionBar"/>
+        <activity android:name=".ConfirmaObraActivity"/>
         <activity android:name=".QrCodeReaderActivity"/>
         <activity
             android:name=".HomeActivity"
