@@ -28,7 +28,7 @@
 16-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:9:19-67
 17
 18    <application
-18-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:11:5-31:19
+18-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:11:5-32:19
 19        android:allowBackup="true"
 19-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:12:9-35
 20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -49,32 +49,35 @@
 29        <activity android:name="com.example.projetopdmgrupo3.ProfileActivity" />
 29-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:18:9-62
 29-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:18:19-50
-30        <activity android:name="com.example.projetopdmgrupo3.ConfirmaObraActivity" />
-30-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:19:9-57
-30-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:19:19-55
-31        <activity android:name="com.example.projetopdmgrupo3.QrCodeReaderActivity" />
-31-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:20:9-57
-31-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:20:19-55
-32        <activity
-32-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:21:9-23:73
-33            android:name="com.example.projetopdmgrupo3.HomeActivity"
-33-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:22:13-41
-34            android:theme="@style/Theme.ProjetoPDMGrupo3.NoActionBar" />
-34-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:23:13-70
-35        <activity android:name="com.example.projetopdmgrupo3.LoginActivity" >
-35-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:24:9-30:20
-35-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:24:19-48
-36            <intent-filter>
-36-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:25:13-29:29
-37                <action android:name="android.intent.action.MAIN" />
-37-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:26:17-69
-37-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:26:25-66
-38
-39                <category android:name="android.intent.category.LAUNCHER" />
-39-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:28:17-77
-39-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:28:27-74
-40            </intent-filter>
-41        </activity>
-42    </application>
-43
-44</manifest>
+30        <activity
+30-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:19:9-20:72
+31            android:name="com.example.projetopdmgrupo3.ConfirmaObraActivity"
+31-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:19:19-55
+32            android:theme="@style/Theme.ProjetoPDMGrupo3.NoActionBar" />
+32-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:20:13-70
+33        <activity android:name="com.example.projetopdmgrupo3.QrCodeReaderActivity" />
+33-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:21:9-57
+33-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:21:19-55
+34        <activity
+34-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:22:9-24:73
+35            android:name="com.example.projetopdmgrupo3.HomeActivity"
+35-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:23:13-41
+36            android:theme="@style/Theme.ProjetoPDMGrupo3.NoActionBar" />
+36-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:24:13-70
+37        <activity android:name="com.example.projetopdmgrupo3.LoginActivity" >
+37-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:25:9-31:20
+37-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:25:19-48
+38            <intent-filter>
+38-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:26:13-30:29
+39                <action android:name="android.intent.action.MAIN" />
+39-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:27:17-69
+39-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:27:25-66
+40
+41                <category android:name="android.intent.category.LAUNCHER" />
+41-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:29:17-77
+41-->C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app\src\main\AndroidManifest.xml:29:27-74
+42            </intent-filter>
+43        </activity>
+44    </application>
+45
+46</manifest>

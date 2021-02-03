@@ -22,8 +22,6 @@ com/example/projetopdmgrupo3/BuildConfig.java
  com.example.projetopdmgrupo3.BuildConfig
 com/example/projetopdmgrupo3/ConfirmaObraActivity.java
  com.example.projetopdmgrupo3.ConfirmaObraActivity
- com.example.projetopdmgrupo3.ConfirmaObraActivity$1
- com.example.projetopdmgrupo3.ConfirmaObraActivity$2
 com/example/projetopdmgrupo3/RetrofitClient.java
  com.example.projetopdmgrupo3.RetrofitClient
 com/example/projetopdmgrupo3/QrCodeReaderActivity.java
