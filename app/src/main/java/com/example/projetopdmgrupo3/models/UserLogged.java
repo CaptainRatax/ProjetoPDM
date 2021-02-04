@@ -2,6 +2,7 @@ package com.example.projetopdmgrupo3.models;
 
 public class UserLogged {
     int id;
+    int idInspecionador;
     String email;
     String telefone;
     String nome;
@@ -15,8 +16,11 @@ public class UserLogged {
     }
 
     //Usado para Update
-    public UserLogged(int id, String email, String telefone, String nome, String dataNascimento, String imagem, int isLoggedIn) {
+
+
+    public UserLogged(int id, int idInspecionador, String email, String telefone, String nome, String dataNascimento, String imagem, int isLoggedIn) {
         this.id = id;
+        this.idInspecionador = idInspecionador;
         this.email = email;
         this.telefone = telefone;
         this.nome = nome;
@@ -26,7 +30,9 @@ public class UserLogged {
     }
 
     //Usado para Insert
-    public UserLogged(String email, String telefone, String nome, String dataNascimento, String imagem, int isLoggedIn) {
+
+    public UserLogged(int idInspecionador, String email, String telefone, String nome, String dataNascimento, String imagem, int isLoggedIn) {
+        this.idInspecionador = idInspecionador;
         this.email = email;
         this.telefone = telefone;
         this.nome = nome;
@@ -34,6 +40,7 @@ public class UserLogged {
         this.imagem = imagem;
         this.isLoggedIn = isLoggedIn;
     }
+
 
     //-------------------------------GETTERS AND SETTERS--------------------------------
 
@@ -43,6 +50,14 @@ public class UserLogged {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getIdInspecionador() {
+        return idInspecionador;
+    }
+
+    public void setIdInspecionador(int idInspecionador) {
+        this.idInspecionador = idInspecionador;
     }
 
     public String getEmail() {
