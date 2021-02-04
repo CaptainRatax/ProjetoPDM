@@ -88,6 +88,10 @@
         "source": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\src\\main\\res\\drawable\\empty_avatar.png"
     },
     {
+        "merged": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_inspecao_home.xml.flat",
+        "source": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\src\\main\\res\\layout\\activity_inspecao_home.xml"
+    },
+    {
         "merged": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_home_24.xml.flat",
         "source": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\src\\main\\res\\drawable\\ic_baseline_home_24.xml"
     },

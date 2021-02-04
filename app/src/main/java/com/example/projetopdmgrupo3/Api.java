@@ -23,4 +23,7 @@ public interface Api {
     @GET("Obra")
     Call<JsonObject> getObraById(@Query("Id") int obraId);
 
+    @POST("Obra/Entrada")
+    Call<JsonObject> entradaNaObra(@Body JsonObject body);
+
 }

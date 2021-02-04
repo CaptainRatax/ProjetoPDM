@@ -33,4 +33,21 @@
     <string name="confirme_os_dados">Confirme os dados</string>
     <string name="cancelar">Cancelar</string>
     <string name="confirmar">Confirmar</string>
+    <string name="dados_da_obra">Dados da obra:</string>
+    <string name="rua_do_exemplo_1234">Rua do exemplo 1234</string>
+    <string name="localidade_exemplo">Localidade exemplo</string>
+    <string name="_1234_123">1234-123</string>
+    <string name="dados_do_cliente">Dados do cliente:</string>
+    <string name="senhor_exemplo_do_exemplar_de_nome_completo">Senhor Exemplo do Exemplar de Nome Completo</string>
+    <string name="emailexemplo_exemplemail_com">emailexemplo@exemplemail.com</string>
+    <string name="_351_915592811">+351 915592811</string>
+    <string name="finalizar">Finalizar</string>
+    <string name="criar_caso">Criar caso</string>
+    <string-array name="list_exemplo">
+        <item>Exeplo 1</item>
+        <item>Exeplo 2</item>
+        <item>Exeplo 3</item>
+        <item>Exeplo 4</item>
+        <item>Exeplo 5</item>
+    </string-array>
 </resources>

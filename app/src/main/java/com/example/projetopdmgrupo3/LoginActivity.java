@@ -39,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         }else{
-            db.addUserLogged(new UserLogged("None", "None", "None", "None", "None", 0));
+            db.addUserLogged(new UserLogged(0,"None", "None", "None", "None", "None", 0));
         }
         setContentView(R.layout.activity_login);
         Button btn_login = (Button) findViewById(R.id.btn_login);
@@ -65,6 +65,7 @@ public class LoginActivity extends AppCompatActivity {
                                                 JsonObject inspecionador = response.body().get("Inspecionador").getAsJsonObject();
                                                 UserLogged userLogged = new UserLogged(
                                                         1,
+                                                        inspecionador.get("Id").getAsInt(),
                                                         inspecionador.get("Email").getAsString(),
                                                         inspecionador.get("Telefone").getAsString(),
                                                         inspecionador.get("Nome").getAsString(),

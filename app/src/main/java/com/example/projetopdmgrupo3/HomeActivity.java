@@ -31,7 +31,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.projetopdmgrupo3.models.Cliente;
+import com.example.projetopdmgrupo3.models.InspecaoOnGoing;
 import com.example.projetopdmgrupo3.models.Obra;
+import com.example.projetopdmgrupo3.models.RegistoHoras;
 import com.example.projetopdmgrupo3.models.UserLogged;
 import com.google.android.material.navigation.NavigationView;
 import com.google.gson.JsonObject;
@@ -46,6 +49,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     private DrawerLayout drawer;
 
     UserLogged userLogged;
+    InspecaoOnGoing inspecaoOnGoing;
 
     BaseDadosLocal db = new BaseDadosLocal(this);
 
@@ -55,6 +59,16 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        inspecaoOnGoing = db.getInspecaoOnGoing();
+        if(inspecaoOnGoing != null){
+            if(inspecaoOnGoing.getIsInspecaoOnGoing() == 1){
+                Intent intent = new Intent(getApplicationContext(), InspecaoHomeActivity.class);
+                startActivity(intent);
+            }
+        }else{
+            db.addInspecaoOnGoing(new InspecaoOnGoing(new Obra(), new Cliente(), 0));
+            inspecaoOnGoing = db.getInspecaoOnGoing();
+        }
         setContentView(R.layout.activity_home);
         Bundle extras = getIntent().getExtras();
         Toolbar toolbar = findViewById(R.id.toolbar);

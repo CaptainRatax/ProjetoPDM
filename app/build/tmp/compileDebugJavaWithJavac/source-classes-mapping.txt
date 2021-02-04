@@ -1,33 +1,40 @@
+com/example/projetopdmgrupo3/ProfileActivity.java
+ com.example.projetopdmgrupo3.ProfileActivity
+com/example/projetopdmgrupo3/models/InspecaoOnGoing.java
+ com.example.projetopdmgrupo3.models.InspecaoOnGoing
+com/example/projetopdmgrupo3/models/RegistoHoras.java
+ com.example.projetopdmgrupo3.models.RegistoHoras
+com/example/projetopdmgrupo3/BuildConfig.java
+ com.example.projetopdmgrupo3.BuildConfig
+com/example/projetopdmgrupo3/models/UserLogged.java
+ com.example.projetopdmgrupo3.models.UserLogged
+com/example/projetopdmgrupo3/RetrofitClient.java
+ com.example.projetopdmgrupo3.RetrofitClient
+com/example/projetopdmgrupo3/BaseDadosLocal.java
+ com.example.projetopdmgrupo3.BaseDadosLocal
+com/example/projetopdmgrupo3/models/Obra.java
+ com.example.projetopdmgrupo3.models.Obra
+com/example/projetopdmgrupo3/models/Cliente.java
+ com.example.projetopdmgrupo3.models.Cliente
+com/example/projetopdmgrupo3/Api.java
+ com.example.projetopdmgrupo3.Api
+com/example/projetopdmgrupo3/QrCodeReaderActivity.java
+ com.example.projetopdmgrupo3.QrCodeReaderActivity
+ com.example.projetopdmgrupo3.QrCodeReaderActivity$1
+com/example/projetopdmgrupo3/LoginActivity.java
+ com.example.projetopdmgrupo3.LoginActivity
+ com.example.projetopdmgrupo3.LoginActivity$1
+ com.example.projetopdmgrupo3.LoginActivity$1$1
 com/example/projetopdmgrupo3/HomeActivity.java
  com.example.projetopdmgrupo3.HomeActivity
  com.example.projetopdmgrupo3.HomeActivity$1
  com.example.projetopdmgrupo3.HomeActivity$2
  com.example.projetopdmgrupo3.HomeActivity$2$1
  com.example.projetopdmgrupo3.HomeActivity$3
-com/example/projetopdmgrupo3/Api.java
- com.example.projetopdmgrupo3.Api
-com/example/projetopdmgrupo3/models/UserLogged.java
- com.example.projetopdmgrupo3.models.UserLogged
-com/example/projetopdmgrupo3/ProfileActivity.java
- com.example.projetopdmgrupo3.ProfileActivity
-com/example/projetopdmgrupo3/BaseDadosLocal.java
- com.example.projetopdmgrupo3.BaseDadosLocal
-com/example/projetopdmgrupo3/LoginActivity.java
- com.example.projetopdmgrupo3.LoginActivity
- com.example.projetopdmgrupo3.LoginActivity$1
- com.example.projetopdmgrupo3.LoginActivity$1$1
-com/example/projetopdmgrupo3/models/Cliente.java
- com.example.projetopdmgrupo3.models.Cliente
-com/example/projetopdmgrupo3/BuildConfig.java
- com.example.projetopdmgrupo3.BuildConfig
+com/example/projetopdmgrupo3/InspecaoHomeActivity.java
+ com.example.projetopdmgrupo3.InspecaoHomeActivity
 com/example/projetopdmgrupo3/ConfirmaObraActivity.java
  com.example.projetopdmgrupo3.ConfirmaObraActivity
  com.example.projetopdmgrupo3.ConfirmaObraActivity$1
  com.example.projetopdmgrupo3.ConfirmaObraActivity$2
-com/example/projetopdmgrupo3/RetrofitClient.java
- com.example.projetopdmgrupo3.RetrofitClient
-com/example/projetopdmgrupo3/QrCodeReaderActivity.java
- com.example.projetopdmgrupo3.QrCodeReaderActivity
- com.example.projetopdmgrupo3.QrCodeReaderActivity$1
-com/example/projetopdmgrupo3/models/Obra.java
- com.example.projetopdmgrupo3.models.Obra
+ com.example.projetopdmgrupo3.ConfirmaObraActivity$2$1
