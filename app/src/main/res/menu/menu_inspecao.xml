@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/menu_top"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home_inspecao"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/p_gina_inicial" />
+        <item
+            android:id="@+id/nav_criar_caso"
+            android:icon="@drawable/ic_baseline_add_circle_24"
+            android:title="@string/criar_caso_nav" />
+        <item
+            android:id="@+id/nav_finalizar"
+            android:icon="@drawable/ic_baseline_check_circle_24"
+            android:title="@string/finalizar_inspe_o" />
+    </group>
+
+    <group
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/nav_cancelarInspecao"
+            android:icon="@drawable/ic_baseline_delete_forever_24"
+            android:title="@string/cancelar_inspe_o" />
+        <item
+            android:id="@+id/nav_logout_inspecao"
+            android:icon="@drawable/ic_baseline_exit_to_app_24"
+            android:title="@string/logout" />
+    </group>
+</menu>

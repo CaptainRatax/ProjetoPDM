@@ -1,40 +1,73 @@
-com/example/projetopdmgrupo3/ProfileActivity.java
- com.example.projetopdmgrupo3.ProfileActivity
+com/example/projetopdmgrupo3/Activities/FinalizarInspecaoActivity.java
+ com.example.projetopdmgrupo3.Activities.FinalizarInspecaoActivity
 com/example/projetopdmgrupo3/models/InspecaoOnGoing.java
  com.example.projetopdmgrupo3.models.InspecaoOnGoing
-com/example/projetopdmgrupo3/models/RegistoHoras.java
- com.example.projetopdmgrupo3.models.RegistoHoras
+com/example/projetopdmgrupo3/server/RetrofitClient.java
+ com.example.projetopdmgrupo3.server.RetrofitClient
+com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity.java
+ com.example.projetopdmgrupo3.Activities.AdicionarCasoActivity
+ com.example.projetopdmgrupo3.Activities.AdicionarCasoActivity$1
+ com.example.projetopdmgrupo3.Activities.AdicionarCasoActivity$10
+ com.example.projetopdmgrupo3.Activities.AdicionarCasoActivity$11
+ com.example.projetopdmgrupo3.Activities.AdicionarCasoActivity$12
+ com.example.projetopdmgrupo3.Activities.AdicionarCasoActivity$13
+ com.example.projetopdmgrupo3.Activities.AdicionarCasoActivity$14
+ com.example.projetopdmgrupo3.Activities.AdicionarCasoActivity$15
+ com.example.projetopdmgrupo3.Activities.AdicionarCasoActivity$16
+ com.example.projetopdmgrupo3.Activities.AdicionarCasoActivity$17
+ com.example.projetopdmgrupo3.Activities.AdicionarCasoActivity$18
+ com.example.projetopdmgrupo3.Activities.AdicionarCasoActivity$19
+ com.example.projetopdmgrupo3.Activities.AdicionarCasoActivity$2
+ com.example.projetopdmgrupo3.Activities.AdicionarCasoActivity$20
+ com.example.projetopdmgrupo3.Activities.AdicionarCasoActivity$3
+ com.example.projetopdmgrupo3.Activities.AdicionarCasoActivity$4
+ com.example.projetopdmgrupo3.Activities.AdicionarCasoActivity$5
+ com.example.projetopdmgrupo3.Activities.AdicionarCasoActivity$6
+ com.example.projetopdmgrupo3.Activities.AdicionarCasoActivity$7
+ com.example.projetopdmgrupo3.Activities.AdicionarCasoActivity$8
+ com.example.projetopdmgrupo3.Activities.AdicionarCasoActivity$9
+ com.example.projetopdmgrupo3.Activities.AdicionarCasoActivity$AsyncLoading
 com/example/projetopdmgrupo3/BuildConfig.java
  com.example.projetopdmgrupo3.BuildConfig
-com/example/projetopdmgrupo3/models/UserLogged.java
- com.example.projetopdmgrupo3.models.UserLogged
-com/example/projetopdmgrupo3/RetrofitClient.java
- com.example.projetopdmgrupo3.RetrofitClient
-com/example/projetopdmgrupo3/BaseDadosLocal.java
- com.example.projetopdmgrupo3.BaseDadosLocal
+com/example/projetopdmgrupo3/Activities/HomeActivity.java
+ com.example.projetopdmgrupo3.Activities.HomeActivity
+ com.example.projetopdmgrupo3.Activities.HomeActivity$1
+ com.example.projetopdmgrupo3.Activities.HomeActivity$2
+ com.example.projetopdmgrupo3.Activities.HomeActivity$2$1
+ com.example.projetopdmgrupo3.Activities.HomeActivity$3
+com/example/projetopdmgrupo3/Activities/ConfirmaObraActivity.java
+ com.example.projetopdmgrupo3.Activities.ConfirmaObraActivity
+ com.example.projetopdmgrupo3.Activities.ConfirmaObraActivity$1
+ com.example.projetopdmgrupo3.Activities.ConfirmaObraActivity$2
+ com.example.projetopdmgrupo3.Activities.ConfirmaObraActivity$2$1
+com/example/projetopdmgrupo3/server/BaseDadosLocal.java
+ com.example.projetopdmgrupo3.server.BaseDadosLocal
 com/example/projetopdmgrupo3/models/Obra.java
  com.example.projetopdmgrupo3.models.Obra
+com/example/projetopdmgrupo3/models/CustomAdapter.java
+ com.example.projetopdmgrupo3.models.CustomAdapter
+com/example/projetopdmgrupo3/server/Api.java
+ com.example.projetopdmgrupo3.server.Api
+com/example/projetopdmgrupo3/models/Fotografia.java
+ com.example.projetopdmgrupo3.models.Fotografia
+com/example/projetopdmgrupo3/Activities/ProfileActivity.java
+ com.example.projetopdmgrupo3.Activities.ProfileActivity
+com/example/projetopdmgrupo3/models/UserLogged.java
+ com.example.projetopdmgrupo3.models.UserLogged
+com/example/projetopdmgrupo3/models/Caso.java
+ com.example.projetopdmgrupo3.models.Caso
+com/example/projetopdmgrupo3/Activities/LoginActivity.java
+ com.example.projetopdmgrupo3.Activities.LoginActivity
+ com.example.projetopdmgrupo3.Activities.LoginActivity$1
+ com.example.projetopdmgrupo3.Activities.LoginActivity$1$1
+com/example/projetopdmgrupo3/Activities/QrCodeReaderActivity.java
+ com.example.projetopdmgrupo3.Activities.QrCodeReaderActivity
+ com.example.projetopdmgrupo3.Activities.QrCodeReaderActivity$1
 com/example/projetopdmgrupo3/models/Cliente.java
  com.example.projetopdmgrupo3.models.Cliente
-com/example/projetopdmgrupo3/Api.java
- com.example.projetopdmgrupo3.Api
-com/example/projetopdmgrupo3/QrCodeReaderActivity.java
- com.example.projetopdmgrupo3.QrCodeReaderActivity
- com.example.projetopdmgrupo3.QrCodeReaderActivity$1
-com/example/projetopdmgrupo3/LoginActivity.java
- com.example.projetopdmgrupo3.LoginActivity
- com.example.projetopdmgrupo3.LoginActivity$1
- com.example.projetopdmgrupo3.LoginActivity$1$1
-com/example/projetopdmgrupo3/HomeActivity.java
- com.example.projetopdmgrupo3.HomeActivity
- com.example.projetopdmgrupo3.HomeActivity$1
- com.example.projetopdmgrupo3.HomeActivity$2
- com.example.projetopdmgrupo3.HomeActivity$2$1
- com.example.projetopdmgrupo3.HomeActivity$3
-com/example/projetopdmgrupo3/InspecaoHomeActivity.java
- com.example.projetopdmgrupo3.InspecaoHomeActivity
-com/example/projetopdmgrupo3/ConfirmaObraActivity.java
- com.example.projetopdmgrupo3.ConfirmaObraActivity
- com.example.projetopdmgrupo3.ConfirmaObraActivity$1
- com.example.projetopdmgrupo3.ConfirmaObraActivity$2
- com.example.projetopdmgrupo3.ConfirmaObraActivity$2$1
+com/example/projetopdmgrupo3/models/RegistoHoras.java
+ com.example.projetopdmgrupo3.models.RegistoHoras
+com/example/projetopdmgrupo3/Activities/InspecaoHomeActivity.java
+ com.example.projetopdmgrupo3.Activities.InspecaoHomeActivity
+ com.example.projetopdmgrupo3.Activities.InspecaoHomeActivity$1
+ com.example.projetopdmgrupo3.Activities.InspecaoHomeActivity$2

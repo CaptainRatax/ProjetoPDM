@@ -26,14 +26,20 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.ProjetoPDMGrupo3" >
-        <activity android:name="com.example.projetopdmgrupo3.InspecaoHomeActivity" />
-        <activity android:name="com.example.projetopdmgrupo3.ProfileActivity" />
-        <activity android:name="com.example.projetopdmgrupo3.ConfirmaObraActivity" />
-        <activity android:name="com.example.projetopdmgrupo3.QrCodeReaderActivity" />
+        <activity android:name="com.example.projetopdmgrupo3.Activities.FinalizarInspecaoActivity" />
         <activity
-            android:name="com.example.projetopdmgrupo3.HomeActivity"
+            android:name="com.example.projetopdmgrupo3.Activities.AdicionarCasoActivity"
             android:theme="@style/Theme.ProjetoPDMGrupo3.NoActionBar" />
-        <activity android:name="com.example.projetopdmgrupo3.LoginActivity" >
+        <activity
+            android:name="com.example.projetopdmgrupo3.Activities.InspecaoHomeActivity"
+            android:theme="@style/Theme.ProjetoPDMGrupo3.NoActionBar" />
+        <activity android:name="com.example.projetopdmgrupo3.Activities.ProfileActivity" />
+        <activity android:name="com.example.projetopdmgrupo3.Activities.ConfirmaObraActivity" />
+        <activity android:name="com.example.projetopdmgrupo3.Activities.QrCodeReaderActivity" />
+        <activity
+            android:name="com.example.projetopdmgrupo3.Activities.HomeActivity"
+            android:theme="@style/Theme.ProjetoPDMGrupo3.NoActionBar" />
+        <activity android:name="com.example.projetopdmgrupo3.Activities.LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
