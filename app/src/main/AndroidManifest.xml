@@ -16,20 +16,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetoPDMGrupo3">
-        <activity android:name=".InspecaoHomeActivity"></activity>
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".ConfirmaObraActivity" />
-        <activity android:name=".QrCodeReaderActivity" />
-        <activity
-            android:name=".HomeActivity"
+        <activity android:name=".Activities.CasoViewActivity"
             android:theme="@style/Theme.ProjetoPDMGrupo3.NoActionBar" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".Activities.FinalizarInspecaoActivity"
+            android:theme="@style/Theme.ProjetoPDMGrupo3.NoActionBar" />
+        <activity
+            android:name=".Activities.AdicionarCasoActivity"
+            android:theme="@style/Theme.ProjetoPDMGrupo3.NoActionBar" />
+        <activity
+            android:name=".Activities.InspecaoHomeActivity"
+            android:theme="@style/Theme.ProjetoPDMGrupo3.NoActionBar" />
+        <activity android:name=".Activities.ConfirmaObraActivity" />
+        <activity android:name=".Activities.QrCodeReaderActivity" />
+        <activity
+            android:name=".Activities.HomeActivity"
+            android:theme="@style/Theme.ProjetoPDMGrupo3.NoActionBar" />
+        <activity android:name=".Activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service android:name=".server.MyService"/>
     </application>
 
 </manifest>

@@ -1,5 +1,17 @@
 [
     {
+        "merged": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu_inspecao.xml.flat",
+        "source": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\src\\main\\res\\menu\\menu_inspecao.xml"
+    },
+    {
+        "merged": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_finalizar_inspecao.xml.flat",
+        "source": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\src\\main\\res\\layout\\activity_finalizar_inspecao.xml"
+    },
+    {
+        "merged": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_cancel_24.xml.flat",
+        "source": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\src\\main\\res\\drawable\\ic_baseline_cancel_24.xml"
+    },
+    {
         "merged": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\build\\intermediates\\res\\merged\\debug\\layout_nav_header.xml.flat",
         "source": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\src\\main\\res\\layout\\nav_header.xml"
     },
@@ -24,12 +36,32 @@
         "source": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\src\\main\\res\\drawable\\ic_baseline_qr_code_scanner_24.xml"
     },
     {
+        "merged": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_check_circle_24.xml.flat",
+        "source": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\src\\main\\res\\drawable\\ic_baseline_check_circle_24.xml"
+    },
+    {
         "merged": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_image_not_supported_24.xml.flat",
+        "source": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\src\\main\\res\\drawable\\ic_baseline_image_not_supported_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_add_circle_24.xml.flat",
+        "source": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\src\\main\\res\\drawable\\ic_baseline_add_circle_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_file_upload_24.xml.flat",
+        "source": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\src\\main\\res\\drawable\\ic_baseline_file_upload_24.xml"
+    },
+    {
         "merged": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_confirma_obra.xml.flat",
         "source": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\src\\main\\res\\layout\\activity_confirma_obra.xml"
+    },
+    {
+        "merged": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_sync_24.xml.flat",
+        "source": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\src\\main\\res\\drawable\\ic_baseline_sync_24.xml"
     },
     {
         "merged": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
@@ -38,6 +70,10 @@
     {
         "merged": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_menu_24.xml.flat",
         "source": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\src\\main\\res\\drawable\\ic_baseline_menu_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_deleteleft.png.flat",
+        "source": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\src\\main\\res\\drawable\\deleteleft.png"
     },
     {
         "merged": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
@@ -64,12 +100,16 @@
         "source": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
+        "merged": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_image_24.xml.flat",
+        "source": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\src\\main\\res\\drawable\\ic_baseline_image_24.xml"
+    },
+    {
         "merged": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_profile.xml.flat",
-        "source": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\src\\main\\res\\layout\\activity_profile.xml"
+        "merged": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_sync_problem_24.xml.flat",
+        "source": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\src\\main\\res\\drawable\\ic_baseline_sync_problem_24.xml"
     },
     {
         "merged": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
@@ -86,6 +126,10 @@
     {
         "merged": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_empty_avatar.png.flat",
         "source": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\src\\main\\res\\drawable\\empty_avatar.png"
+    },
+    {
+        "merged": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_delete_forever_24.xml.flat",
+        "source": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\src\\main\\res\\drawable\\ic_baseline_delete_forever_24.xml"
     },
     {
         "merged": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_inspecao_home.xml.flat",
@@ -112,8 +156,20 @@
         "source": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_adicionar_caso.xml.flat",
+        "source": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\src\\main\\res\\layout\\activity_adicionar_caso.xml"
+    },
+    {
         "merged": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_caso_view.xml.flat",
+        "source": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\src\\main\\res\\layout\\activity_caso_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\build\\intermediates\\res\\merged\\debug\\layout_single_item.xml.flat",
+        "source": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\src\\main\\res\\layout\\single_item.xml"
     },
     {
         "merged": "C:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_camera_alt_24.xml.flat",

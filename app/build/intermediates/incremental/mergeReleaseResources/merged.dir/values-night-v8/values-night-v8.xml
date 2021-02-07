@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <string name="_1234_123">1234-123</string>
+    <string name="_351_915592811">+351 915592811</string>
+    <string name="app_name">Projeto PDM Grupo 3</string>
+    <string name="bem_vindo_utilizador">Bem vindo Utilizador!</string>
+    <string name="button">Button</string>
+    <string name="c_digo_postal">Código Postal: </string>
+    <string name="camera">Camera</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="cancelar_inspe_o">Cancelar Inspeção</string>
+    <string name="codigo_postal">codigo postal</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="confirme_os_dados">Confirme os dados</string>
+    <string name="criar_caso">Criar caso</string>
+    <string name="criar_caso_nav">Criar Caso</string>
+    <string name="dados_da_obra">Dados da obra:</string>
+    <string name="dados_do_cliente">Dados do cliente:</string>
+    <string name="delete_image_1">Delete Image 1</string>
+    <string name="delete_image_2">Delete Image 2</string>
+    <string name="delete_image_3">Delete Image 3</string>
+    <string name="delete_image_4">Delete Image 4</string>
+    <string name="delete_image_5">Delete Image 5</string>
+    <string name="delete_image_6">Delete Image 6</string>
+    <string name="delete_image_7">Delete Image 7</string>
+    <string name="delete_image_8">Delete Image 8</string>
+    <string name="delete_image_9">Delete Image 9</string>
+    <string name="descri_o">Descrição</string>
+    <string name="descri_o_max_1024_caract_res">Descrição (max 1024 caractéres)</string>
+    <string name="detalhes_da_obra">Detalhes da Obra</string>
+    <string name="detalhes_do_cliente">Detalhes do Cliente</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="email">Email</string>
+    <string name="email1">Email: </string>
+    <string name="email2">email</string>
+    <string name="emailexemplo_exemplemail_com">emailexemplo@exemplemail.com</string>
+    <string name="finalizar">Finalizar</string>
+    <string name="finalizar_inspe_o">Finalizar Inspeção</string>
+    <string name="id_da_obra">Id da Obra</string>
+    <string name="imagem_1_do_caso">Imagem 1 do Caso</string>
+    <string name="imagem_2_do_caso">Imagem 2 do Caso</string>
+    <string name="imagem_3_do_caso">Imagem 3 do Caso</string>
+    <string name="imagem_4_do_caso">Imagem 4 do Caso</string>
+    <string name="imagem_5_do_caso">Imagem 5 do Caso</string>
+    <string name="imagem_6_do_caso">Imagem 6 do Caso</string>
+    <string name="imagem_7_do_caso">Imagem 7 do Caso</string>
+    <string name="imagem_8_do_caso">Imagem 8 do Caso</string>
+    <string name="inspecionar">Inspecionar</string>
+    <string name="ler_c_digo_qr">Ler Código QR</string>
+    <string name="lista_de_casos">Lista de Casos</string>
+    <string name="loading">Loading...</string>
+    <string name="localidade">localidade</string>
+    <string name="localidade1">Localidade: </string>
+    <string name="localidade_exemplo">Localidade exemplo</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="morada">Morada: </string>
+    <string name="morada1">morada</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="nome">Nome: </string>
+    <string name="nome1">nome</string>
+    <string name="observa_es">Observações</string>
+    <string name="observa_es_a_acrescentar_inspe_o_max_1024_caract_res">Observações a acrescentar à inspeção (max 1024 caractéres)</string>
+    <string name="p_gina_inicial">Página Inicial</string>
+    <string name="password">Password</string>
+    <string name="perfil">Perfil</string>
+    <string name="qual_acha_que_foi_a_classifica_o_final_da_inspe_o">Qual acha que foi a classificação final da inspeção?</string>
+    <string name="rua_do_exemplo_1234">Rua do exemplo 1234</string>
+    <string name="sair_da_inspe_o">Sair da inspeção</string>
+    <string name="senhor_exemplo_do_exemplar_de_nome_completo">Senhor Exemplo do Exemplar de Nome Completo</string>
+    <string name="sincronizar_dados">Sincronizar Dados</string>
+    <string name="submeter">Submeter</string>
+    <string name="subtitulo">Subtitulo</string>
+    <string name="t_tulo">Título (max 50 caractéres)</string>
+    <string name="t_tulo1">Título</string>
+    <string name="t_tulos">Título</string>
+    <string name="telefone">Telefone: </string>
+    <string name="telefone1">telefone</string>
+    <string name="titulo">Titulo</string>
+    <string name="user_emailexample_com">user@emailexample.com</string>
+    <string name="user_example">User Example</string>
+    <string name="voltar">Voltar</string>
+    <style name="Theme.AppCompat.DayNight" parent="Theme.AppCompat"/>
+    <style name="Theme.AppCompat.DayNight.DarkActionBar" parent="Theme.AppCompat"/>
+    <style name="Theme.AppCompat.DayNight.Dialog" parent="Theme.AppCompat.Dialog"/>
+    <style name="Theme.AppCompat.DayNight.Dialog.Alert" parent="Theme.AppCompat.Dialog.Alert"/>
+    <style name="Theme.AppCompat.DayNight.Dialog.MinWidth" parent="Theme.AppCompat.Dialog.MinWidth"/>
+    <style name="Theme.AppCompat.DayNight.DialogWhenLarge" parent="Theme.AppCompat.DialogWhenLarge"/>
+    <style name="Theme.AppCompat.DayNight.NoActionBar" parent="Theme.AppCompat.NoActionBar"/>
+    <style name="Theme.MaterialComponents.DayNight" parent="Theme.MaterialComponents"/>
+    <style name="Theme.MaterialComponents.DayNight.BottomSheetDialog" parent="Theme.MaterialComponents.BottomSheetDialog"/>
+    <style name="Theme.MaterialComponents.DayNight.Bridge" parent="Theme.MaterialComponents.Bridge"/>
+    <style name="Theme.MaterialComponents.DayNight.DarkActionBar" parent="Theme.MaterialComponents"/>
+    <style name="Theme.MaterialComponents.DayNight.DarkActionBar.Bridge" parent="Theme.MaterialComponents.Bridge"/>
+    <style name="Theme.MaterialComponents.DayNight.Dialog" parent="Theme.MaterialComponents.Dialog"/>
+    <style name="Theme.MaterialComponents.DayNight.Dialog.Alert" parent="Theme.MaterialComponents.Dialog.Alert"/>
+    <style name="Theme.MaterialComponents.DayNight.Dialog.Alert.Bridge" parent="Theme.MaterialComponents.Dialog.Alert.Bridge"/>
+    <style name="Theme.MaterialComponents.DayNight.Dialog.Bridge" parent="Theme.MaterialComponents.Dialog.Bridge"/>
+    <style name="Theme.MaterialComponents.DayNight.Dialog.FixedSize" parent="Theme.MaterialComponents.Dialog.FixedSize"/>
+    <style name="Theme.MaterialComponents.DayNight.Dialog.FixedSize.Bridge" parent="Theme.MaterialComponents.Dialog.FixedSize.Bridge"/>
+    <style name="Theme.MaterialComponents.DayNight.Dialog.MinWidth" parent="Theme.MaterialComponents.Dialog.MinWidth"/>
+    <style name="Theme.MaterialComponents.DayNight.Dialog.MinWidth.Bridge" parent="Theme.MaterialComponents.Dialog.MinWidth.Bridge"/>
+    <style name="Theme.MaterialComponents.DayNight.DialogWhenLarge" parent="Theme.MaterialComponents.DialogWhenLarge"/>
+    <style name="Theme.MaterialComponents.DayNight.NoActionBar" parent="Theme.MaterialComponents.NoActionBar"/>
+    <style name="Theme.MaterialComponents.DayNight.NoActionBar.Bridge" parent="Theme.MaterialComponents.NoActionBar.Bridge"/>
+    <style name="Theme.ProjetoPDMGrupo3" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" ns1:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="Theme.ProjetoPDMGrupo3.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="ThemeOverlay.AppCompat.DayNight" parent="ThemeOverlay.AppCompat.Dark"/>
+    <style name="ThemeOverlay.MaterialComponents.DayNight.BottomSheetDialog" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog"/>
+    <style name="Widget.MaterialComponents.ActionBar.PrimarySurface" parent="Widget.MaterialComponents.ActionBar.Surface"/>
+    <style name="Widget.MaterialComponents.AppBarLayout.PrimarySurface" parent="Widget.MaterialComponents.AppBarLayout.Surface"/>
+    <style name="Widget.MaterialComponents.BottomAppBar.PrimarySurface" parent="Widget.MaterialComponents.BottomAppBar"/>
+    <style name="Widget.MaterialComponents.BottomNavigationView.PrimarySurface" parent="Widget.MaterialComponents.BottomNavigationView"/>
+    <style name="Widget.MaterialComponents.TabLayout.PrimarySurface" parent="Widget.MaterialComponents.TabLayout"/>
+    <style name="Widget.MaterialComponents.Toolbar.PrimarySurface" parent="Widget.MaterialComponents.Toolbar.Surface"/>
+</resources>

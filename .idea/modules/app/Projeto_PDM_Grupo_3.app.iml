@@ -98,5 +98,6 @@
     <orderEntry type="library" name="Gradle: de.hdodenhof:circleimageview:3.1.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: me.dm7.barcodescanner:zxing:1.9.13@aar" level="project" />
     <orderEntry type="library" name="Gradle: me.dm7.barcodescanner:core:1.9.13@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.synnapps:carouselview:0.1.5@aar" level="project" />
   </component>
 </module>
