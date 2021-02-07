@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout_inspecao"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".Activities.CasoViewActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_inspecao_casoView"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/purple_500"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <TextView
+            android:id="@+id/txt_titulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:text="@string/t_tulos"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.042"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_inspecao_casoView"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing" />
+
+        <TextView
+            android:id="@+id/txt_descricao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:text="@string/descri_o"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_titulo"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula lacus vel nisl maximus, eget dictum ipsum lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et turpis nec nulla condimentum blandit. Vestibulum lobortis, diam eu suscipit placerat, lorem lectus volutpat ipsum, id congue nunc velit a sem. Nam ultrices felis vel libero pharetra molestie. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed posuere, urna sit amet volutpat aliquet, orci augue ultrices felis, lacinia aliquam ex lacus sit amet felis. Vivamus gravida lorem eget erat auctor porttitor. Ut consectetur quam at ante rhoncus fringilla. Phasellus commodo velit vel vehicula vulputate. Sed a nisl rhoncus, vestibulum libero eget, tristique justo. Sed aliquam massa ut nisi tincidunt, non scelerisque ipsum ornare. Aliquam justo nisi, luctus ac arcu at, blandit dictum sem. Proin posuere ipsum ut est porta, ut ullamcorper purus pellentesque. Aliquam nec ipsum feugiat, conse" />
+
+        <com.synnapps.carouselview.CarouselView
+            android:id="@+id/carousel_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_voltar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_descricao" />
+
+        <Button
+            android:id="@+id/btn_voltar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/voltar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btn_eliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="#FF0000"
+            android:text="@string/eliminar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/btn_voltar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view_inspecao"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/menu_inspecao" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

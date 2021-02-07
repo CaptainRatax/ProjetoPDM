@@ -13,8 +13,10 @@ import androidx.annotation.Nullable;
 
 import com.example.projetopdmgrupo3.models.Caso;
 import com.example.projetopdmgrupo3.models.Cliente;
+import com.example.projetopdmgrupo3.models.DeleteCasosSynced;
 import com.example.projetopdmgrupo3.models.Fotografia;
 import com.example.projetopdmgrupo3.models.InspecaoOnGoing;
+import com.example.projetopdmgrupo3.models.IsDataSynced;
 import com.example.projetopdmgrupo3.models.Obra;
 import com.example.projetopdmgrupo3.models.RegistoHoras;
 import com.example.projetopdmgrupo3.models.UserLogged;
@@ -32,8 +34,9 @@ public class BaseDadosLocal extends SQLiteOpenHelper {
     private static final String TABELA_INSPECAOONGOING = "tb_inspecaoOnGoing";
     private static final String TABELA_REGISTOHORAS = "tb_registoHoras";
     private static final String TABELA_CASOS = "tb_casos";
-    private static final String TABELA_CASOSFOTOGRAFIAS = "tb_casosFotografias";
     private static final String TABELA_FOTOGRAFIAS = "tb_fotografias";
+    private static final String TABELA_DELETECASOSSYNCED = "tb_deleteCasosSynced";
+    private static final String TABELA_ISDATASYNCED = "tb_isDataSynced";
 
     /**CAMPOS (<NOMETABELA>_<NOMECAMPO>) */
     //Tabela userLoged
@@ -66,6 +69,8 @@ public class BaseDadosLocal extends SQLiteOpenHelper {
     private static final String REGISTOHORAS_SAIDA = "Saida";
     private static final String REGISTOHORAS_IDOBRA = "IdObra";
     private static final String REGISTOHORAS_IDINSPECIONADOR = "IdInspecionador";
+    private static final String REGISTOHORAS_NOTA = "Nota";
+    private static final String REGISTOHORAS_OBSERVACOES = "Observacoes";
     //Tabela casos
     private static final String CASOS_ID = "ID";
     private static final String CASOS_TITULO = "Titulo";
@@ -74,10 +79,17 @@ public class BaseDadosLocal extends SQLiteOpenHelper {
     private static final String CASOS_IDINSPECIONADOR = "IdInspecionador";
     private static final String CASOS_CREATEDAT = "CreatedAt";
     private static final String CASOS_ISSYNCED = "IsSynced";
+    private static final String CASOS_IDISSYNCED = "IdIsSynced";
     //Tabela Fotografias
     private static final String FOTOGRAFIAS_ID = "ID";
     private static final String FOTOGRAFIAS_IDCASO = "IdCaso";
     private static final String FOTOGRAFIAS_FOTOGRAFIA = "Fotografia";
+    //Tabela DeleteCasosSynced
+    private static final String DELETECASOSSYNCED_ID = "ID";
+    private static final String DELETECASOSSYNCED_IDISSYNCED = "IdIsSynced";
+    //Tabela IsDataSynced
+    private static final String ISDATASYNCED_ID = "ID";
+    private static final String ISDATASYNCED_ISSYNCED = "IsSynced";
 
 
     public BaseDadosLocal(Context context) {
@@ -102,20 +114,27 @@ public class BaseDadosLocal extends SQLiteOpenHelper {
         String QUERY_CREATE_TABLE_REGISTOHORAS = "CREATE TABLE " + TABELA_REGISTOHORAS + "("
                 + REGISTOHORAS_ID + " INTEGER PRIMARY KEY, "
                 + REGISTOHORAS_ENTRADA + " TEXT, " + REGISTOHORAS_SAIDA + " TEXT, "
-                + REGISTOHORAS_IDOBRA + " INTEGER, " + REGISTOHORAS_IDINSPECIONADOR + " INTEGER)";
+                + REGISTOHORAS_IDOBRA + " INTEGER, " + REGISTOHORAS_IDINSPECIONADOR + " INTEGER, "
+                + REGISTOHORAS_NOTA + " REAL, " + REGISTOHORAS_OBSERVACOES + " TEXT)";
         String QUERY_CREATE_TABLE_CASOS = "CREATE TABLE " + TABELA_CASOS + "("
                 + CASOS_ID + " INTEGER PRIMARY KEY, "
                 + CASOS_TITULO + " TEXT, " + CASOS_DESCRICAO + " TEXT, "
                 + CASOS_IDOBRA + " INTEGER, " + CASOS_IDINSPECIONADOR + " INTEGER, " + CASOS_CREATEDAT + " TEXT, "
-                + CASOS_ISSYNCED + " INTEGER)";
+                + CASOS_ISSYNCED + " INTEGER, " + CASOS_IDISSYNCED + " INTEGER)";
         String QUERY_CREATE_TABLE_FOTOGRAFIAS = "CREATE TABLE " + TABELA_FOTOGRAFIAS + "("
                 + FOTOGRAFIAS_ID + " INTEGER PRIMARY KEY, " + FOTOGRAFIAS_IDCASO + " INTEGER, "
                 + FOTOGRAFIAS_FOTOGRAFIA + " TEXT)";
+        String QUERY_CREATE_TABLE_DELETECASOSSYNCED = "CREATE TABLE " + TABELA_DELETECASOSSYNCED + "("
+                + DELETECASOSSYNCED_ID + " INTEGER PRIMARY KEY, " + DELETECASOSSYNCED_IDISSYNCED + " INTEGER)";
+        String QUERY_CREATE_TABLE_ISDATASYNCED = "CREATE TABLE " + TABELA_ISDATASYNCED + "("
+                + ISDATASYNCED_ID + " INTEGER PRIMARY KEY, " + ISDATASYNCED_ISSYNCED + " INTEGER)";
         db.execSQL(QUERY_CREATE_TABELA_USERLOGGED);
         db.execSQL(QUERY_CREATE_TABELA_INSPECAOONGOING);
         db.execSQL(QUERY_CREATE_TABLE_REGISTOHORAS);
         db.execSQL(QUERY_CREATE_TABLE_CASOS);
         db.execSQL(QUERY_CREATE_TABLE_FOTOGRAFIAS);
+        db.execSQL(QUERY_CREATE_TABLE_DELETECASOSSYNCED);
+        db.execSQL(QUERY_CREATE_TABLE_ISDATASYNCED);
     }
 
     @Override
@@ -330,7 +349,9 @@ public class BaseDadosLocal extends SQLiteOpenHelper {
         values.put(REGISTOHORAS_ENTRADA, registoHoras.getEntrada());
         values.put(REGISTOHORAS_SAIDA, registoHoras.getSaida());
         values.put(REGISTOHORAS_IDOBRA, registoHoras.getIdObra());
-        values.put(REGISTOHORAS_IDINSPECIONADOR, registoHoras.getEntrada());
+        values.put(REGISTOHORAS_IDINSPECIONADOR, registoHoras.getIdInspecionador());
+        values.put(REGISTOHORAS_NOTA, registoHoras.getNota());
+        values.put(REGISTOHORAS_OBSERVACOES, registoHoras.getObservacoes());
 
         long id = db.insert(TABELA_REGISTOHORAS, null, values);
         db.close();
@@ -347,7 +368,7 @@ public class BaseDadosLocal extends SQLiteOpenHelper {
     public RegistoHoras getRegistoHorasById(int id){
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(TABELA_REGISTOHORAS, new String[] {REGISTOHORAS_ID, REGISTOHORAS_ENTRADA, REGISTOHORAS_SAIDA,
-                        REGISTOHORAS_IDOBRA, REGISTOHORAS_IDINSPECIONADOR}, REGISTOHORAS_ID + " = ?",
+                        REGISTOHORAS_IDOBRA, REGISTOHORAS_IDINSPECIONADOR, REGISTOHORAS_NOTA, REGISTOHORAS_OBSERVACOES}, REGISTOHORAS_ID + " = ?",
                 new String[]{String.valueOf(id)}, null, null, null, null);
         if(cursor != null){
             cursor.moveToFirst();
@@ -355,7 +376,9 @@ public class BaseDadosLocal extends SQLiteOpenHelper {
                 RegistoHoras registoHoras1 = new RegistoHoras(Integer.parseInt(cursor.getString(0)),
                         cursor.getString(1), cursor.getString(2),
                         Integer.parseInt(cursor.getString(3)),
-                        Integer.parseInt(cursor.getString(4)));
+                        Integer.parseInt(cursor.getString(4)),
+                        Float.parseFloat(cursor.getString(5)),
+                        cursor.getString(6));
                 return registoHoras1;
             }catch (Exception e){
                 return null;
@@ -365,29 +388,32 @@ public class BaseDadosLocal extends SQLiteOpenHelper {
         }
     }
     //GET REGISTOHORAS By ClienteId e ObraId
-    public RegistoHoras getRegistoHorasByClienteIdObraId(int obraId, int clienteId){
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.query(TABELA_REGISTOHORAS, new String[] {REGISTOHORAS_ID, REGISTOHORAS_ENTRADA, REGISTOHORAS_SAIDA,
-                        REGISTOHORAS_IDOBRA, REGISTOHORAS_IDINSPECIONADOR}, REGISTOHORAS_IDOBRA + " = ? AND " + REGISTOHORAS_IDINSPECIONADOR + " = ?",
-                new String[]{String.valueOf(obraId), String.valueOf(clienteId)}, null, null, null, null);
-        if(cursor != null){
-            cursor.moveToFirst();
-            try {
-                RegistoHoras registoHoras1 = new RegistoHoras(Integer.parseInt(cursor.getString(0)),
-                        cursor.getString(1), cursor.getString(2),
-                        Integer.parseInt(cursor.getString(3)),
-                        Integer.parseInt(cursor.getString(4)));
-                return registoHoras1;
-            }catch (Exception e){
-                return null;
-            }
-        }else{
-            return null;
+    public RegistoHoras getRegistoHorasByClienteIdObraId(int obraId, int idInspecionador){
+        RegistoHoras registoHoras = new RegistoHoras();
+
+        String query = "SELECT * FROM " + TABELA_REGISTOHORAS;
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+
+        if(cursor.moveToFirst()){
+            do {
+                if (Integer.parseInt(cursor.getString(3))==obraId && Integer.parseInt(cursor.getString(4))==idInspecionador){
+                    registoHoras.setId(Integer.parseInt(cursor.getString(0)));
+                    registoHoras.setEntrada(cursor.getString(1));
+                    registoHoras.setSaida(cursor.getString(2));
+                    registoHoras.setIdObra(Integer.parseInt(cursor.getString(3)));
+                    registoHoras.setIdInspecionador(Integer.parseInt(cursor.getString(4)));
+                    registoHoras.setNota(Float.parseFloat(cursor.getString(5)));
+                    registoHoras.setObservacoes(cursor.getString(6));
+                }
+            }while(cursor.moveToNext());
         }
+        return registoHoras;
     }
     //GET ALL REGISTOHORAS
-    public List<RegistoHoras> getTodosRegistosHoras(){
-        List<RegistoHoras> listaRegistoHoras = new ArrayList<RegistoHoras>();
+    public ArrayList<RegistoHoras> getTodosRegistosHoras(){
+        ArrayList<RegistoHoras> listaRegistoHoras = new ArrayList<RegistoHoras>();
 
         String query = "SELECT * FROM " + TABELA_REGISTOHORAS;
 
@@ -402,6 +428,8 @@ public class BaseDadosLocal extends SQLiteOpenHelper {
                 registoHoras.setSaida(cursor.getString(2));
                 registoHoras.setIdObra(Integer.parseInt(cursor.getString(3)));
                 registoHoras.setIdInspecionador(Integer.parseInt(cursor.getString(4)));
+                registoHoras.setNota(Float.parseFloat(cursor.getString(5)));
+                registoHoras.setObservacoes(cursor.getString(6));
 
                 listaRegistoHoras.add(registoHoras);
             }while(cursor.moveToNext());
@@ -416,7 +444,9 @@ public class BaseDadosLocal extends SQLiteOpenHelper {
         values.put(REGISTOHORAS_ENTRADA, registoHoras.getEntrada());
         values.put(REGISTOHORAS_SAIDA, registoHoras.getSaida());
         values.put(REGISTOHORAS_IDOBRA, registoHoras.getIdObra());
-        values.put(REGISTOHORAS_IDINSPECIONADOR, registoHoras.getEntrada());
+        values.put(REGISTOHORAS_IDINSPECIONADOR, registoHoras.getIdInspecionador());
+        values.put(REGISTOHORAS_NOTA, registoHoras.getNota());
+        values.put(REGISTOHORAS_OBSERVACOES, registoHoras.getObservacoes());
 
         db.update(TABELA_REGISTOHORAS, values, REGISTOHORAS_ID + " = ?",
                 new String[] {String.valueOf(registoHoras.getId())});
@@ -435,6 +465,7 @@ public class BaseDadosLocal extends SQLiteOpenHelper {
         values.put(CASOS_IDINSPECIONADOR, caso.getIdInspecionador());
         values.put(CASOS_CREATEDAT, caso.getCreatedAt());
         values.put(CASOS_ISSYNCED, caso.getIsSynced());
+        values.put(CASOS_IDISSYNCED, caso.getIdIsSynced());
 
         int id = (int) db.insert(TABELA_CASOS, null, values);
         db.close();
@@ -448,7 +479,7 @@ public class BaseDadosLocal extends SQLiteOpenHelper {
         }
         return id;
     }
-    //DELETE REGISTOHORAS
+    //DELETE CASO
     public void deleteCasoById(int id){
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(TABELA_CASOS, CASOS_ID + " = ?", new String[]{String.valueOf(id)});
@@ -462,7 +493,7 @@ public class BaseDadosLocal extends SQLiteOpenHelper {
     public Caso getCasoById(int id){
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(TABELA_CASOS, new String[] {CASOS_ID, CASOS_TITULO, CASOS_DESCRICAO,
-                        CASOS_IDOBRA, CASOS_IDINSPECIONADOR, CASOS_CREATEDAT, CASOS_ISSYNCED}, REGISTOHORAS_ID + " = ?",
+                        CASOS_IDOBRA, CASOS_IDINSPECIONADOR, CASOS_CREATEDAT, CASOS_ISSYNCED, CASOS_IDISSYNCED}, REGISTOHORAS_ID + " = ?",
                 new String[]{String.valueOf(id)}, null, null, null, null);
         if(cursor != null){
             cursor.moveToFirst();
@@ -472,7 +503,8 @@ public class BaseDadosLocal extends SQLiteOpenHelper {
                         Integer.parseInt(cursor.getString(3)),
                         Integer.parseInt(cursor.getString(4)),
                         cursor.getString(5),
-                        Integer.parseInt(cursor.getString(6))
+                        Integer.parseInt(cursor.getString(6)),
+                        Integer.parseInt(cursor.getString(7))
                         );
                 return caso1;
             }catch (Exception e){
@@ -488,8 +520,36 @@ public class BaseDadosLocal extends SQLiteOpenHelper {
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.query(TABELA_CASOS, new String[] {CASOS_ID, CASOS_TITULO, CASOS_DESCRICAO,
-                CASOS_IDOBRA, CASOS_IDINSPECIONADOR, CASOS_CREATEDAT, CASOS_ISSYNCED},
+                CASOS_IDOBRA, CASOS_IDINSPECIONADOR, CASOS_CREATEDAT, CASOS_ISSYNCED, CASOS_IDISSYNCED},
                 CASOS_IDOBRA + " = ?", new String[]{String.valueOf(idObra)}, null, null, null, null);
+
+        if(cursor.moveToFirst()){
+            do {
+                String stirng = cursor.getString(7);
+                Caso caso = new Caso();
+                caso.setId(Integer.parseInt(cursor.getString(0)));
+                caso.setTitulo(cursor.getString(1));
+                caso.setDescricao(cursor.getString(2));
+                caso.setIdObra(Integer.parseInt(cursor.getString(3)));
+                caso.setIdInspecionador(Integer.parseInt(cursor.getString(4)));
+                caso.setCreatedAt(cursor.getString(5));
+                caso.setIsSynced(Integer.parseInt(cursor.getString(6)));
+                caso.setIdIsSynced(Integer.parseInt(cursor.getString(7)));
+
+
+                listaCasos.add(caso);
+            }while(cursor.moveToNext());
+        }
+        return listaCasos;
+    }
+    //GET ALL CASOS NOT SYNCED
+    public ArrayList<Caso> getAllCasosNotSynced(){
+        ArrayList<Caso> listaCasos = new ArrayList<Caso>();
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.query(TABELA_CASOS, new String[] {CASOS_ID, CASOS_TITULO, CASOS_DESCRICAO,
+                        CASOS_IDOBRA, CASOS_IDINSPECIONADOR, CASOS_CREATEDAT, CASOS_ISSYNCED, CASOS_IDISSYNCED},
+                CASOS_ISSYNCED + " = ?", new String[]{String.valueOf(0)}, null, null, null, null);
 
         if(cursor.moveToFirst()){
             do {
@@ -501,13 +561,30 @@ public class BaseDadosLocal extends SQLiteOpenHelper {
                 caso.setIdInspecionador(Integer.parseInt(cursor.getString(4)));
                 caso.setCreatedAt(cursor.getString(5));
                 caso.setIsSynced(Integer.parseInt(cursor.getString(6)));
+                caso.setIdIsSynced(Integer.parseInt(cursor.getString(7)));
+
 
                 listaCasos.add(caso);
             }while(cursor.moveToNext());
         }
         return listaCasos;
     }
+    //UPDATE CASO
+    public void updateCaso(Caso caso){
+        SQLiteDatabase db = this.getWritableDatabase();
 
+        ContentValues values = new ContentValues();
+        values.put(CASOS_TITULO, caso.getTitulo());
+        values.put(CASOS_DESCRICAO, caso.getDescricao());
+        values.put(CASOS_IDOBRA, caso.getIdObra());
+        values.put(CASOS_IDINSPECIONADOR, caso.getIdInspecionador());
+        values.put(CASOS_CREATEDAT, caso.getCreatedAt());
+        values.put(CASOS_ISSYNCED, caso.getIsSynced());
+        values.put(CASOS_IDISSYNCED, caso.getIdIsSynced());
+
+        db.update(TABELA_CASOS, values, CASOS_ID + " = ?",
+                new String[] {String.valueOf(caso.getId())});
+    }
 
     /**CRUD FOTOGRAFIAS*/
     //ADICIONAR FOTOGRAFIA
@@ -541,8 +618,6 @@ public class BaseDadosLocal extends SQLiteOpenHelper {
     public ArrayList<Fotografia> getAllFotografiasByIdCaso(int idCaso){
         ArrayList<Fotografia> listaFotografias = new ArrayList<Fotografia>();
 
-        String query = "SELECT * FROM " + TABELA_REGISTOHORAS;
-
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.query(TABELA_FOTOGRAFIAS, new String[] {FOTOGRAFIAS_ID, FOTOGRAFIAS_IDCASO, FOTOGRAFIAS_FOTOGRAFIA},
                 FOTOGRAFIAS_IDCASO + " = ?", new String[]{String.valueOf(idCaso)}, null, null, null, null);
@@ -559,4 +634,125 @@ public class BaseDadosLocal extends SQLiteOpenHelper {
         }
         return listaFotografias;
     }
+
+    /**CRUD DELETECASOSSYNCED*/
+    //ADICIONAR DELETECASOSSYNCED
+    public int addDeleteCasosSynced(DeleteCasosSynced deleteCasosSynced){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+
+        values.put(DELETECASOSSYNCED_ID, deleteCasosSynced.getIdIsSynced());
+
+        long id = db.insert(TABELA_DELETECASOSSYNCED, null, values);
+        db.close();
+        return (int) id;
+    }
+    //DELETE DELETECASOSSYNCED By Id
+    public void deleteCasosSyncedById(int id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(TABELA_DELETECASOSSYNCED, DELETECASOSSYNCED_ID + " = ?", new String[]{String.valueOf(id)});
+
+        db.close();
+    }
+    //DELETE DELETECASOSSYNCED By IdIsSynced
+    public void deleteCasosSyncedByIdIsSynced(int id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(TABELA_DELETECASOSSYNCED, DELETECASOSSYNCED_IDISSYNCED + " = ?", new String[]{String.valueOf(id)});
+
+        db.close();
+    }
+    //GET ALL DELETECASOSSYNCED
+    public ArrayList<DeleteCasosSynced> getAllDeleteCasosSynced(){
+        ArrayList<DeleteCasosSynced> listaDeleteCasosSynced = new ArrayList<DeleteCasosSynced>();
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.query(TABELA_DELETECASOSSYNCED, new String[] {DELETECASOSSYNCED_ID, DELETECASOSSYNCED_IDISSYNCED}, null, null, null, null, null, null);
+
+        if(cursor.moveToFirst()){
+            do {
+                DeleteCasosSynced deleteCasosSynced = new DeleteCasosSynced();
+                deleteCasosSynced.setId(Integer.parseInt(cursor.getString(0)));
+                deleteCasosSynced.setIdIsSynced(Integer.parseInt(cursor.getString(1)));
+
+                listaDeleteCasosSynced.add(deleteCasosSynced);
+            }while(cursor.moveToNext());
+        }
+        return listaDeleteCasosSynced;
+    }
+
+    /**CRUD ISDATASYNCED*/
+    //ADD DATASYNCED
+    public void addIsDataSynced(IsDataSynced isDataSynced){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+
+        values.put(ISDATASYNCED_ISSYNCED, isDataSynced.getIsSynced());
+
+        db.insert(TABELA_ISDATASYNCED, null, values);
+        db.close();
+    }
+    //DELETE DATASYNCED
+    public void deleteIsDataSynced(IsDataSynced isDataSynced){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(TABELA_ISDATASYNCED, ISDATASYNCED_ID + " = ?", new String[]{String.valueOf(isDataSynced.getId())});
+
+        db.close();
+    }
+    //GET IsDATASYNCED boolean
+    public boolean isDataSynced(){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query(TABELA_ISDATASYNCED, new String[] {ISDATASYNCED_ID, ISDATASYNCED_ISSYNCED}, ISDATASYNCED_ID + " = ?",
+                new String[]{String.valueOf(1)}, null, null, null, null);
+        if(cursor != null){
+            cursor.moveToFirst();
+            try {
+                IsDataSynced isDataSynced = new IsDataSynced(Integer.parseInt(cursor.getString(0)),
+                        Integer.parseInt(cursor.getString(1)));
+                if (Integer.parseInt(cursor.getString(1))==1){
+                    return true;
+                }else {
+                    return false;
+                }
+            }catch (Exception e){
+                return true;
+            }
+        }else{
+            return true;
+        }
+    }
+    //GET DATASYNCED object
+    public IsDataSynced getIsDataSynced(){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query(TABELA_ISDATASYNCED, new String[] {ISDATASYNCED_ID, ISDATASYNCED_ISSYNCED}, ISDATASYNCED_ID + " = ?",
+                new String[]{String.valueOf(1)}, null, null, null, null);
+        if(cursor != null){
+            cursor.moveToFirst();
+            try {
+                IsDataSynced isDataSynced = new IsDataSynced(Integer.parseInt(cursor.getString(0)),
+                        Integer.parseInt(cursor.getString(1)));
+                return isDataSynced;
+            }catch (Exception e){
+                return null;
+            }
+        }else{
+            return null;
+        }
+    }
+    //UPDATE DATASYNCED
+    public void updateIsDataSynced(boolean isDataSynced){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        if (isDataSynced){
+            values.put(ISDATASYNCED_ISSYNCED, 1);
+        }else{
+            values.put(ISDATASYNCED_ISSYNCED, 0);
+        }
+
+        db.update(TABELA_ISDATASYNCED, values, ISDATASYNCED_ID + " = ?",
+                new String[] {String.valueOf(1)});
+    }
+
 }

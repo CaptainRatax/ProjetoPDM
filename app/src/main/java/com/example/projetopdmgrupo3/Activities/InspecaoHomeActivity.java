@@ -8,13 +8,20 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Base64;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -29,11 +36,18 @@ import com.example.projetopdmgrupo3.models.InspecaoOnGoing;
 import com.example.projetopdmgrupo3.models.Obra;
 import com.example.projetopdmgrupo3.models.RegistoHoras;
 import com.example.projetopdmgrupo3.models.UserLogged;
+import com.example.projetopdmgrupo3.server.MyService;
+import com.example.projetopdmgrupo3.server.RetrofitClient;
 import com.google.android.material.navigation.NavigationView;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class InspecaoHomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -63,10 +77,13 @@ public class InspecaoHomeActivity extends AppCompatActivity implements Navigatio
             Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
             startActivity(intent);
         }
+
+        userLogged = db.getUserLogged();
+
         obra = inspecaoOnGoing.getObra();
         cliente = inspecaoOnGoing.getCliente();
-        registoHoras = db.getRegistoHorasByClienteIdObraId(obra.getId(), cliente.getId());
-        Toolbar toolbar = findViewById(R.id.toolbar_inspecao);
+        registoHoras = db.getRegistoHorasByClienteIdObraId(obra.getId(), userLogged.getIdInspecionador());
+        Toolbar toolbar = findViewById(R.id.toolbar_inspecao_casoView);
         setSupportActionBar(toolbar);
         drawer = findViewById(R.id.drawer_layout_inspecao);
         NavigationView navigationView= findViewById(R.id.nav_view_inspecao);
@@ -76,13 +93,10 @@ public class InspecaoHomeActivity extends AppCompatActivity implements Navigatio
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        userLogged = db.getUserLogged();
-
         View headerView = navigationView.getHeaderView(0);
         TextView txt_userName = (TextView) headerView.findViewById(R.id.userName);
         TextView txt_userEmail = (TextView) headerView.findViewById(R.id.userEmail);
         CircleImageView img_userImage = (CircleImageView) headerView.findViewById(R.id.profile_image);
-        TextView txt_BemVindo = (TextView) findViewById(R.id.txt_BemVindo);
 
         txt_userName.setText(userLogged.getNome());
         txt_userEmail.setText(userLogged.getEmail());
@@ -118,6 +132,15 @@ public class InspecaoHomeActivity extends AppCompatActivity implements Navigatio
             }
         });
 
+        lv_casos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int i, long l) {
+                Intent intent = new Intent(getApplicationContext(), CasoViewActivity.class);
+                intent.putExtra("IDCASO", casosArrayList.get(i).getId());
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override
@@ -125,6 +148,11 @@ public class InspecaoHomeActivity extends AppCompatActivity implements Navigatio
         super.onRestart();
         NavigationView navigationView = findViewById(R.id.nav_view_inspecao);
         navigationView.setCheckedItem(R.id.nav_home_inspecao);
+        casosArrayList = db.getAllCasosByIdObra(obra.getId());
+
+        ListView lv_casos = findViewById(R.id.lv_casos);
+        CustomAdapter casosAdapter = new CustomAdapter(InspecaoHomeActivity.this, casosArrayList);
+        lv_casos.setAdapter(casosAdapter);
     }
 
     @Override
@@ -148,14 +176,100 @@ public class InspecaoHomeActivity extends AppCompatActivity implements Navigatio
                 startActivity(intent1);
                 break;
             case R.id.nav_cancelarInspecao:
-                Toast.makeText(this, "Cancelaste .-.", Toast.LENGTH_SHORT).show();
+                showMessageOKCancel("Tem a certeza que quer cancelar a inspeção? Todos os dados serão perdidos!",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                cancelarInspecao(false);
+                            }
+                        });
                 break;
             case R.id.nav_logout_inspecao:
-                Toast.makeText(this, "Logout", Toast.LENGTH_SHORT).show();
+                showMessageOKCancel("Tem a certeza que quer cancelar a inspeção? Todos os dados serão perdidos!",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                cancelarInspecao(true);
+                            }
+                        });
                 break;
         }
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void showMessageOKCancel(String message, DialogInterface.OnClickListener okListener) {
+        new AlertDialog.Builder(InspecaoHomeActivity.this)
+                .setMessage(message)
+                .setPositiveButton("Aceitar", okListener)
+                .setNegativeButton("Cancelar", null)
+                .create()
+                .show();
+    }
+
+    private void cancelarInspecao(boolean logout){
+        if (isNetworkAvailable()){
+            String json = "{ " +
+                    "\"IdObra\": \"" + inspecaoOnGoing.getObra().getId() + "\", " +
+                    "\"IdInspecionador\": \"" + userLogged.getIdInspecionador() + "\"}";
+            JsonObject body = new JsonParser().parse(json).getAsJsonObject();
+            Call<JsonObject> call = RetrofitClient.getInstance().getMyApi().cancelarInspecao(body);
+            call.enqueue(new Callback<JsonObject>() {
+                @Override
+                public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+                    if(response.body() != null) {
+                        if (response.body().get("Success").getAsBoolean()) {
+                            if (response.body().get("RequestCode").getAsInt() == 200) {
+                                ArrayList<Caso> casosParaEliminar = db.getAllCasosByIdObra(inspecaoOnGoing.getObra().getId());
+                                for (Caso casoParaEliminar:casosParaEliminar) {
+                                    db.deleteCasoById(casoParaEliminar.getId());
+                                }
+                                RegistoHoras registoHorasParaEliminar = db.getRegistoHorasByClienteIdObraId(inspecaoOnGoing.getObra().getId(), userLogged.getIdInspecionador());
+                                db.deleteRegistoHoraById(registoHorasParaEliminar.getId());
+                                db.acabarInspecao();
+                                if (logout){
+                                        db.userLogout();
+                                        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                                        startActivity(intent);
+                                }else{
+                                    Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                                    startActivity(intent);
+                                }
+
+                            }else{
+                                try {
+                                    Toast.makeText(InspecaoHomeActivity.this, response.body().get("Message").getAsString(), Toast.LENGTH_LONG).show();
+                                }catch (Exception err){
+                                    Toast.makeText(InspecaoHomeActivity.this, "Ups. Algo correu mal...", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        }else{
+                            try {
+                                Toast.makeText(InspecaoHomeActivity.this, response.body().get("Message").getAsString(), Toast.LENGTH_LONG).show();
+                            }catch (Exception err){
+                                Toast.makeText(InspecaoHomeActivity.this, "Ups. Algo correu mal...", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    }else{
+                        Toast.makeText(InspecaoHomeActivity.this, "Ups. Algo correu mal...", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<JsonObject> call, Throwable t) {
+                    Toast.makeText(InspecaoHomeActivity.this, "Ups. Algo correu mal...", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }else{
+            Toast.makeText(this, "Para cancelar a inspeção é preciso ter conexão à internet :(", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
     @Override

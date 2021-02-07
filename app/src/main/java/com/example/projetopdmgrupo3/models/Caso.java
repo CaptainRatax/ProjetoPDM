@@ -8,11 +8,12 @@ public class Caso {
     int idInspecionador;
     String createdAt;
     int isSynced;
+    int idIsSynced;
 
     public Caso() {
     }
 
-    public Caso(int id, String titulo, String descricao, int idObra, int idInspecionador, String createdAt, int isSynced) {
+    public Caso(int id, String titulo, String descricao, int idObra, int idInspecionador, String createdAt, int isSynced, int idIsSynced) {
         this.id = id;
         this.titulo = titulo;
         this.descricao = descricao;
@@ -20,15 +21,17 @@ public class Caso {
         this.idInspecionador = idInspecionador;
         this.createdAt = createdAt;
         this.isSynced = isSynced;
+        this.idIsSynced = idIsSynced;
     }
 
-    public Caso(String titulo, String descricao, int idObra, int idInspecionador, String createdAt, int isSynced) {
+    public Caso(String titulo, String descricao, int idObra, int idInspecionador, String createdAt, int isSynced, int idIsSynced) {
         this.titulo = titulo;
         this.descricao = descricao;
         this.idObra = idObra;
         this.idInspecionador = idInspecionador;
         this.createdAt = createdAt;
         this.isSynced = isSynced;
+        this.idIsSynced = idIsSynced;
     }
 
     public int getId() {
@@ -85,5 +88,13 @@ public class Caso {
 
     public void setIsSynced(int isSynced) {
         this.isSynced = isSynced;
+    }
+
+    public int getIdIsSynced() {
+        return idIsSynced;
+    }
+
+    public void setIdIsSynced(int idIsSynced) {
+        this.idIsSynced = idIsSynced;
     }
 }

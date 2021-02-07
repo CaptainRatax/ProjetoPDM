@@ -26,14 +26,18 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.ProjetoPDMGrupo3" >
-        <activity android:name="com.example.projetopdmgrupo3.Activities.FinalizarInspecaoActivity" />
+        <activity
+            android:name="com.example.projetopdmgrupo3.Activities.CasoViewActivity"
+            android:theme="@style/Theme.ProjetoPDMGrupo3.NoActionBar" />
+        <activity
+            android:name="com.example.projetopdmgrupo3.Activities.FinalizarInspecaoActivity"
+            android:theme="@style/Theme.ProjetoPDMGrupo3.NoActionBar" />
         <activity
             android:name="com.example.projetopdmgrupo3.Activities.AdicionarCasoActivity"
             android:theme="@style/Theme.ProjetoPDMGrupo3.NoActionBar" />
         <activity
             android:name="com.example.projetopdmgrupo3.Activities.InspecaoHomeActivity"
             android:theme="@style/Theme.ProjetoPDMGrupo3.NoActionBar" />
-        <activity android:name="com.example.projetopdmgrupo3.Activities.ProfileActivity" />
         <activity android:name="com.example.projetopdmgrupo3.Activities.ConfirmaObraActivity" />
         <activity android:name="com.example.projetopdmgrupo3.Activities.QrCodeReaderActivity" />
         <activity
@@ -46,6 +50,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service android:name="com.example.projetopdmgrupo3.server.MyService" />
     </application>
 
 </manifest>

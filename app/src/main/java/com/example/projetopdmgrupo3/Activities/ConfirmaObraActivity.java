@@ -96,7 +96,7 @@ public class ConfirmaObraActivity extends AppCompatActivity {
                                 if (response.body().get("Success").getAsBoolean()) {
                                     if (response.body().get("RequestCode").getAsInt() == 200) {
                                         //Se a entrada já tiver sido registada na base de dados online tanto a entrada como a saida vão vazias
-                                        registoHoras = new RegistoHoras("", "", obra.getId(), userLogged.getIdInspecionador());
+                                        registoHoras = new RegistoHoras("", "", obra.getId(), userLogged.getIdInspecionador(), 0,"");
                                         registoHoras.setId(db.addRegistoHora(registoHoras));
 
                                         InspecaoOnGoing inspecaoOnGoing = new InspecaoOnGoing(1, obra, cliente, 1);
@@ -130,8 +130,9 @@ public class ConfirmaObraActivity extends AppCompatActivity {
                         }
                     });
                 }else{
+                    db.updateIsDataSynced(false);
                     //Se a entrada não tiver sido registada na base de dados online então ele guarda a data atual da entrada e envia a saida vazia
-                    registoHoras = new RegistoHoras(dataAtual, "", obra.getId(), userLogged.getIdInspecionador());
+                    registoHoras = new RegistoHoras(dataAtual, "", obra.getId(), userLogged.getIdInspecionador(), 0, "");
                     registoHoras.setId(db.addRegistoHora(registoHoras));
 
                     InspecaoOnGoing inspecaoOnGoing = new InspecaoOnGoing(1, obra, cliente, 1);

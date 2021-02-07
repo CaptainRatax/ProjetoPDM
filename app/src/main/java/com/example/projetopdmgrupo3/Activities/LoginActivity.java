@@ -15,8 +15,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.projetopdmgrupo3.models.IsDataSynced;
 import com.example.projetopdmgrupo3.server.BaseDadosLocal;
 import com.example.projetopdmgrupo3.R;
+import com.example.projetopdmgrupo3.server.MyService;
 import com.example.projetopdmgrupo3.server.RetrofitClient;
 import com.example.projetopdmgrupo3.models.UserLogged;
 import com.google.gson.JsonObject;
@@ -34,6 +36,8 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
+
         UserLogged userLogged;
         userLogged = db.getUserLogged();
         if(userLogged != null){
@@ -43,6 +47,10 @@ public class LoginActivity extends AppCompatActivity {
             }
         }else{
             db.addUserLogged(new UserLogged(0,"None", "None", "None", "None", "None", 0));
+        }
+        IsDataSynced isDataSynced = db.getIsDataSynced();
+        if (isDataSynced==null){
+            db.addIsDataSynced(new IsDataSynced(1));
         }
         setContentView(R.layout.activity_login);
         Button btn_login = (Button) findViewById(R.id.btn_login);

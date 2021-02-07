@@ -9,8 +9,10 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -25,7 +27,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,13 +39,20 @@ import com.example.projetopdmgrupo3.models.InspecaoOnGoing;
 import com.example.projetopdmgrupo3.models.Obra;
 import com.example.projetopdmgrupo3.models.RegistoHoras;
 import com.example.projetopdmgrupo3.models.UserLogged;
+import com.example.projetopdmgrupo3.server.MyService;
+import com.example.projetopdmgrupo3.server.RetrofitClient;
 import com.google.android.material.navigation.NavigationView;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class AdicionarCasoActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -68,12 +76,14 @@ public class AdicionarCasoActivity extends AppCompatActivity implements Navigati
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         setContentView(R.layout.activity_adicionar_caso);
 
+        userLogged = db.getUserLogged();
+
         inspecaoOnGoing = db.getInspecaoOnGoing();
 
         obra = inspecaoOnGoing.getObra();
         cliente = inspecaoOnGoing.getCliente();
-        registoHoras = db.getRegistoHorasByClienteIdObraId(obra.getId(), cliente.getId());
-        Toolbar toolbar = findViewById(R.id.toolbar_inspecao);
+        registoHoras = db.getRegistoHorasByClienteIdObraId(obra.getId(), userLogged.getIdInspecionador());
+        Toolbar toolbar = findViewById(R.id.toolbar_inspecao_casoView);
         setSupportActionBar(toolbar);
         drawer = findViewById(R.id.drawer_layout_inspecao);
         NavigationView navigationView = findViewById(R.id.nav_view_inspecao);
@@ -82,8 +92,6 @@ public class AdicionarCasoActivity extends AppCompatActivity implements Navigati
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
-        userLogged = db.getUserLogged();
 
         View headerView = navigationView.getHeaderView(0);
         TextView txt_userName = (TextView) headerView.findViewById(R.id.userName);
@@ -102,6 +110,9 @@ public class AdicionarCasoActivity extends AppCompatActivity implements Navigati
         Button btn_cancelarCaso = findViewById(R.id.btn_cancelarCaso);
         Button btn_submeterCaso = findViewById(R.id.btn_submeterCaso);
 
+        btn_submeterCaso.setEnabled(true);
+        btn_submeterCaso.setClickable(true);
+
         btn_cancelarCaso.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -113,6 +124,8 @@ public class AdicionarCasoActivity extends AppCompatActivity implements Navigati
         btn_submeterCaso.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                btn_submeterCaso.setClickable(false);
+                btn_submeterCaso.setEnabled(false);
                 submeterCaso();
             }
         });
@@ -252,11 +265,12 @@ public class AdicionarCasoActivity extends AppCompatActivity implements Navigati
     public void submeterCaso(){
         EditText edit_titulo = findViewById(R.id.edit_titulo);
         EditText edit_descricao = findViewById(R.id.edit_descricao);
+        Button btn_submeter = findViewById(R.id.btn_submeterCaso);
         String titulo = edit_titulo.getText().toString();
         String descricao = edit_descricao.getText().toString();
         if(titulo!=""){
             if (descricao!=""){
-                if (titulo.length()<=30){
+                if (titulo.length()<=50){
                     if (descricao.length()<=1024){
                         Caso novoCaso = new Caso(
                                 titulo,
@@ -264,6 +278,7 @@ public class AdicionarCasoActivity extends AppCompatActivity implements Navigati
                                 obra.getId(),
                                 userLogged.getIdInspecionador(),
                                 "",
+                                0,
                                 0
                         );
                         String json = "{ " +
@@ -271,30 +286,89 @@ public class AdicionarCasoActivity extends AppCompatActivity implements Navigati
                                 "\"Descricao\": \"" + descricao + "\", " +
                                 "\"IdObra\": \"" + obra.getId() + "\", " +
                                 "\"IdInspecionador\": \"" + userLogged.getIdInspecionador() + "\", " +
-                                "ListaDeImagens:[";
-                        for (Fotografia imagem:imagens) {
-                            json = json + "\"" + imagem.getFotografia() + "\", ";
+                                "\"ListaDeImagens\":[";
+                        if(imagens.size()!=0){
+                            for (Fotografia imagem:imagens) {
+                                json = json + "\"" + imagem.getFotografia() + "\", ";
+                            }
+                            json = json.substring(0, json.length()-2);
                         }
-                        json = json.substring(0, json.length()-2);
                         json = json + "]}";
                         if (isNetworkAvailable()) {
-                            Toast.makeText(this, json, Toast.LENGTH_LONG).show();
+                            JsonObject body = new JsonParser().parse(json).getAsJsonObject();
+                            Call<JsonObject> call = RetrofitClient.getInstance().getMyApi().criarCaso(body);
+                            call.enqueue(new Callback<JsonObject>() {
+                                @Override
+                                public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+                                    if(response.body() != null) {
+                                        if (response.body().get("Success").getAsBoolean()) {
+                                            if (response.body().get("RequestCode").getAsInt() == 200) {
+                                                String str = response.body().get("Message").getAsString();
+                                                str = str.substring(14, str.length());
+                                                String[] splited = str.split("\\s+");
+                                                novoCaso.setIdIsSynced(Integer.parseInt(splited[0]));
+                                                novoCaso.setIsSynced(1);
+                                                db.addCaso(novoCaso, imagens);
+                                                Intent intent = new Intent(getApplicationContext(), InspecaoHomeActivity.class);
+                                                startActivity(intent);
+                                            }else{
+                                                try {
+                                                    Toast.makeText(AdicionarCasoActivity.this, response.body().get("Message").getAsString(), Toast.LENGTH_LONG).show();
+                                                }catch (Exception err){
+                                                    Toast.makeText(AdicionarCasoActivity.this, "Ups. Algo correu mal...", Toast.LENGTH_SHORT).show();
+                                                }
+                                                btn_submeter.setEnabled(true);
+                                                btn_submeter.setClickable(true);
+                                            }
+                                        }else {
+                                            try {
+                                                Toast.makeText(AdicionarCasoActivity.this, response.body().get("Message").getAsString(), Toast.LENGTH_LONG).show();
+                                            }catch (Exception err){
+                                                Toast.makeText(AdicionarCasoActivity.this, "Ups. Algo correu mal...", Toast.LENGTH_SHORT).show();
+                                            }
+                                            btn_submeter.setEnabled(true);
+                                            btn_submeter.setClickable(true);
+                                        }
+                                    }else{
+                                        btn_submeter.setEnabled(true);
+                                        btn_submeter.setClickable(true);
+                                        Toast.makeText(AdicionarCasoActivity.this, "Ups. Algo correu mal...", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+
+                                @Override
+                                public void onFailure(Call<JsonObject> call, Throwable t) {
+                                    btn_submeter.setEnabled(true);
+                                    btn_submeter.setClickable(true);
+                                    Toast.makeText(AdicionarCasoActivity.this, "Ups. Algo correu mal...", Toast.LENGTH_SHORT).show();
+                                }
+                            });
                         } else {
+                            db.updateIsDataSynced(false);
                             db.addCaso(novoCaso, imagens);
+                            Intent intent = new Intent(getApplicationContext(), InspecaoHomeActivity.class);
+                            startActivity(intent);
                         }
                     }else{
+                        btn_submeter.setEnabled(true);
+                        btn_submeter.setClickable(true);
                         Toast.makeText(this, "A descrição não pode ter mais do que 1024 caractéres!", Toast.LENGTH_SHORT).show();
                     }
                 }else{
+                    btn_submeter.setEnabled(true);
+                    btn_submeter.setClickable(true);
                     Toast.makeText(this, "O título não pode ter mais do que 30 caractéres!", Toast.LENGTH_SHORT).show();
                 }
             }else{
+                btn_submeter.setEnabled(true);
+                btn_submeter.setClickable(true);
                 Toast.makeText(this, "A descrição não pode estar vazia!", Toast.LENGTH_SHORT).show();
             }
         }else{
+            btn_submeter.setEnabled(true);
+            btn_submeter.setClickable(true);
             Toast.makeText(this, "O título não pode estar vazio!", Toast.LENGTH_SHORT).show();
         }
-
     }
 
     public  void abrirGaleria(){
@@ -555,14 +629,93 @@ public class AdicionarCasoActivity extends AppCompatActivity implements Navigati
                 startActivity(intent1);
                 break;
             case R.id.nav_cancelarInspecao:
-                Toast.makeText(this, "Cancelaste .-.", Toast.LENGTH_SHORT).show();
+                showMessageOKCancel("Tem a certeza que quer cancelar a inspeção? Todos os dados serão perdidos!",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                cancelarInspecao(false);
+                            }
+                        });
                 break;
             case R.id.nav_logout_inspecao:
-                Toast.makeText(this, "Logout", Toast.LENGTH_SHORT).show();
+                showMessageOKCancel("Tem a certeza que quer cancelar a inspeção? Todos os dados serão perdidos!",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                cancelarInspecao(true);
+                            }
+                        });
                 break;
         }
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void showMessageOKCancel(String message, DialogInterface.OnClickListener okListener) {
+        new AlertDialog.Builder(AdicionarCasoActivity.this)
+                .setMessage(message)
+                .setPositiveButton("Aceitar", okListener)
+                .setNegativeButton("Cancelar", null)
+                .create()
+                .show();
+    }
+
+    private void cancelarInspecao(boolean logout){
+        if (isNetworkAvailable()){
+            String json = "{ " +
+                    "\"IdObra\": \"" + inspecaoOnGoing.getObra().getId() + "\", " +
+                    "\"IdInspecionador\": \"" + userLogged.getIdInspecionador() + "\"}";
+            JsonObject body = new JsonParser().parse(json).getAsJsonObject();
+            Call<JsonObject> call = RetrofitClient.getInstance().getMyApi().cancelarInspecao(body);
+            call.enqueue(new Callback<JsonObject>() {
+                @Override
+                public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+                    if(response.body() != null) {
+                        if (response.body().get("Success").getAsBoolean()) {
+                            if (response.body().get("RequestCode").getAsInt() == 200) {
+                                ArrayList<Caso> casosParaEliminar = db.getAllCasosByIdObra(inspecaoOnGoing.getObra().getId());
+                                for (Caso casoParaEliminar:casosParaEliminar) {
+                                    db.deleteCasoById(casoParaEliminar.getId());
+                                }
+                                RegistoHoras registoHorasParaEliminar = db.getRegistoHorasByClienteIdObraId(inspecaoOnGoing.getObra().getId(), userLogged.getIdInspecionador());
+                                db.deleteRegistoHoraById(registoHorasParaEliminar.getId());
+                                db.acabarInspecao();
+                                if (logout){
+                                        db.userLogout();
+                                        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                                        startActivity(intent);
+                                }else{
+                                    Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                                    startActivity(intent);
+                                }
+
+                            }else{
+                                try {
+                                    Toast.makeText(AdicionarCasoActivity.this, response.body().get("Message").getAsString(), Toast.LENGTH_LONG).show();
+                                }catch (Exception err){
+                                    Toast.makeText(AdicionarCasoActivity.this, "Ups. Algo correu mal...", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        }else{
+                            try {
+                                Toast.makeText(AdicionarCasoActivity.this, response.body().get("Message").getAsString(), Toast.LENGTH_LONG).show();
+                            }catch (Exception err){
+                                Toast.makeText(AdicionarCasoActivity.this, "Ups. Algo correu mal...", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    }else{
+                        Toast.makeText(AdicionarCasoActivity.this, "Ups. Algo correu mal...", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<JsonObject> call, Throwable t) {
+                    Toast.makeText(AdicionarCasoActivity.this, "Ups. Algo correu mal...", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }else{
+            Toast.makeText(this, "Para cancelar a inspeção é preciso ter conexão à internet :(", Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override

@@ -6,14 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".Activities.InspecaoHomeActivity">
+    tools:context=".Activities.AdicionarCasoActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar_inspecao"
+            android:id="@+id/toolbar_inspecao_casoView"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/purple_500"
@@ -34,7 +34,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar_inspecao" />
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_inspecao_casoView" />
 
         <EditText
             android:id="@+id/edit_titulo"
@@ -94,114 +94,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edit_descricao">
-
-            <ImageView
-                android:id="@+id/img_delete1"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="105dp"
-                android:layout_marginBottom="105dp"
-                android:contentDescription="@string/delete_image_1"
-                android:src="@drawable/ic_baseline_cancel_24"
-                android:visibility="invisible"
-                app:layout_constraintBottom_toBottomOf="@+id/img_caso1"
-                app:layout_constraintStart_toStartOf="@+id/img_caso1" />
-
-            <ImageView
-                android:id="@+id/img_delete2"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="105dp"
-                android:layout_marginBottom="105dp"
-                android:contentDescription="@string/delete_image_2"
-                android:src="@drawable/ic_baseline_cancel_24"
-                android:visibility="invisible"
-                app:layout_constraintBottom_toBottomOf="@+id/img_caso2"
-                app:layout_constraintStart_toStartOf="@+id/img_caso2" />
-
-            <ImageView
-                android:id="@+id/img_delete3"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="105dp"
-                android:layout_marginBottom="105dp"
-                android:contentDescription="@string/delete_image_3"
-                android:src="@drawable/ic_baseline_cancel_24"
-                android:visibility="invisible"
-                app:layout_constraintBottom_toBottomOf="@+id/img_caso3"
-                app:layout_constraintStart_toStartOf="@+id/img_caso3" />
-
-            <ImageView
-                android:id="@+id/img_delete4"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="105dp"
-                android:layout_marginBottom="105dp"
-                android:contentDescription="@string/delete_image_4"
-                android:src="@drawable/ic_baseline_cancel_24"
-                android:visibility="invisible"
-                app:layout_constraintBottom_toBottomOf="@+id/img_caso4"
-                app:layout_constraintStart_toStartOf="@+id/img_caso4" />
-
-            <ImageView
-                android:id="@+id/img_delete5"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="105dp"
-                android:layout_marginBottom="105dp"
-                android:contentDescription="@string/delete_image_5"
-                android:src="@drawable/ic_baseline_cancel_24"
-                android:visibility="invisible"
-                app:layout_constraintBottom_toBottomOf="@+id/img_caso5"
-                app:layout_constraintStart_toStartOf="@+id/img_caso5" />
-
-            <ImageView
-                android:id="@+id/img_delete6"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="105dp"
-                android:layout_marginBottom="105dp"
-                android:contentDescription="@string/delete_image_6"
-                android:src="@drawable/ic_baseline_cancel_24"
-                android:visibility="invisible"
-                app:layout_constraintBottom_toBottomOf="@+id/img_caso6"
-                app:layout_constraintStart_toStartOf="@+id/img_caso6" />
-
-            <ImageView
-                android:id="@+id/img_delete7"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="105dp"
-                android:layout_marginBottom="105dp"
-                android:contentDescription="@string/delete_image_7"
-                android:src="@drawable/ic_baseline_cancel_24"
-                android:visibility="invisible"
-                app:layout_constraintBottom_toBottomOf="@+id/img_caso7"
-                app:layout_constraintStart_toStartOf="@+id/img_caso7" />
-
-            <ImageView
-                android:id="@+id/img_delete8"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="105dp"
-                android:layout_marginBottom="105dp"
-                android:contentDescription="@string/delete_image_8"
-                android:src="@drawable/ic_baseline_cancel_24"
-                android:visibility="invisible"
-                app:layout_constraintBottom_toBottomOf="@+id/img_caso8"
-                app:layout_constraintStart_toStartOf="@+id/img_caso8" />
-
-            <ImageView
-                android:id="@+id/img_delete9"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="105dp"
-                android:layout_marginBottom="105dp"
-                android:contentDescription="@string/delete_image_9"
-                android:src="@drawable/ic_baseline_cancel_24"
-                android:visibility="invisible"
-                app:layout_constraintBottom_toBottomOf="@+id/img_caso9"
-                app:layout_constraintStart_toStartOf="@+id/img_caso9" />
 
             <ImageView
                 android:id="@+id/img_caso1"
@@ -363,6 +255,114 @@
                 app:layout_constraintTop_toBottomOf="@+id/img_caso6"
                 app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/ic_baseline_file_upload_24" />
+
+            <ImageView
+                android:id="@+id/img_delete5"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="105dp"
+                android:layout_marginBottom="105dp"
+                android:contentDescription="@string/delete_image_5"
+                android:src="@drawable/ic_baseline_cancel_24"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/img_caso5"
+                app:layout_constraintStart_toStartOf="@+id/img_caso5" />
+
+            <ImageView
+                android:id="@+id/img_delete3"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="105dp"
+                android:layout_marginBottom="105dp"
+                android:contentDescription="@string/delete_image_3"
+                android:src="@drawable/ic_baseline_cancel_24"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/img_caso3"
+                app:layout_constraintStart_toStartOf="@+id/img_caso3" />
+
+            <ImageView
+                android:id="@+id/img_delete9"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="105dp"
+                android:layout_marginBottom="105dp"
+                android:contentDescription="@string/delete_image_9"
+                android:src="@drawable/ic_baseline_cancel_24"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/img_caso9"
+                app:layout_constraintStart_toStartOf="@+id/img_caso9" />
+
+            <ImageView
+                android:id="@+id/img_delete2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="105dp"
+                android:layout_marginBottom="105dp"
+                android:contentDescription="@string/delete_image_2"
+                android:src="@drawable/ic_baseline_cancel_24"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/img_caso2"
+                app:layout_constraintStart_toStartOf="@+id/img_caso2" />
+
+            <ImageView
+                android:id="@+id/img_delete8"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="105dp"
+                android:layout_marginBottom="105dp"
+                android:contentDescription="@string/delete_image_8"
+                android:src="@drawable/ic_baseline_cancel_24"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/img_caso8"
+                app:layout_constraintStart_toStartOf="@+id/img_caso8" />
+
+            <ImageView
+                android:id="@+id/img_delete6"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="105dp"
+                android:layout_marginBottom="105dp"
+                android:contentDescription="@string/delete_image_6"
+                android:src="@drawable/ic_baseline_cancel_24"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/img_caso6"
+                app:layout_constraintStart_toStartOf="@+id/img_caso6" />
+
+            <ImageView
+                android:id="@+id/img_delete4"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="105dp"
+                android:layout_marginBottom="105dp"
+                android:contentDescription="@string/delete_image_4"
+                android:src="@drawable/ic_baseline_cancel_24"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/img_caso4"
+                app:layout_constraintStart_toStartOf="@+id/img_caso4" />
+
+            <ImageView
+                android:id="@+id/img_delete7"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="105dp"
+                android:layout_marginBottom="105dp"
+                android:contentDescription="@string/delete_image_7"
+                android:src="@drawable/ic_baseline_cancel_24"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/img_caso7"
+                app:layout_constraintStart_toStartOf="@+id/img_caso7" />
+
+            <ImageView
+                android:id="@+id/img_delete1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="105dp"
+                android:layout_marginBottom="105dp"
+                android:contentDescription="@string/delete_image_1"
+                android:src="@drawable/ic_baseline_cancel_24"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/img_caso1"
+                app:layout_constraintStart_toStartOf="@+id/img_caso1" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

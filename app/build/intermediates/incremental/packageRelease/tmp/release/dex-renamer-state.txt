@@ -1,0 +1,4 @@
+#Sun Feb 07 01:22:51 GMT 2021
+base.0=C\:\\Users\\ratax\\AndroidStudioProjects\\ProjetoPDMGrupo3\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

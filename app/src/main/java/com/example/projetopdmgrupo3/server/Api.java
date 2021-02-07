@@ -4,6 +4,7 @@ import com.google.gson.JsonObject;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
@@ -28,5 +29,14 @@ public interface Api {
 
     @POST("Casos/Criar")
     Call<JsonObject> criarCaso(@Body JsonObject body);
+
+    @DELETE("Caso/Delete")
+    Call<JsonObject> deleteCaso(@Query("Id") int casoId);
+
+    @POST("Obra/CancelarInspecao")
+    Call<JsonObject> cancelarInspecao(@Body JsonObject body);
+
+    @POST("Obra/Saida")
+    Call<JsonObject> finalizarInspecao(@Body JsonObject body);
 
 }

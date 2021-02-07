@@ -32,6 +32,7 @@ import android.widget.Toast;
 
 import com.example.projetopdmgrupo3.server.BaseDadosLocal;
 import com.example.projetopdmgrupo3.R;
+import com.example.projetopdmgrupo3.server.MyService;
 import com.example.projetopdmgrupo3.server.RetrofitClient;
 import com.example.projetopdmgrupo3.models.Cliente;
 import com.example.projetopdmgrupo3.models.InspecaoOnGoing;
@@ -224,17 +225,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 }
                 break;
             }
-            case R.id.nav_profile:
-            {
-                Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
-                startActivity(intent);
-                break;
-            }
             case R.id.nav_logout:
             {
-                db.userLogout();
-                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-                startActivity(intent);
+                    db.userLogout();
+                    Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                    startActivity(intent);
                 break;
             }
         }

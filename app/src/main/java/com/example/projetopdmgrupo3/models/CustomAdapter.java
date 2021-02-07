@@ -48,13 +48,15 @@ public class CustomAdapter extends BaseAdapter {
         TextView txt_titulo = (TextView) convertView.findViewById(R.id.item_titulo);
         TextView txt_subtitulo = (TextView) convertView.findViewById(R.id.item_subtitulo);
 
-        if (tempCaso.getTitulo().length()>30){
-            String temp = tempCaso.getTitulo().substring(0,30) + "...";
+        if (tempCaso.getTitulo().length()>45){
+            String temp = tempCaso.getTitulo().substring(0,45) + "...";
+            txt_titulo.setText(temp);
         }else{
             txt_titulo.setText(tempCaso.getTitulo());
         }
-        if(tempCaso.getDescricao().length()>108){
-            String temp1 = tempCaso.getDescricao().substring(0,108) + "...";
+        if(tempCaso.getDescricao().length()>105){
+            String temp1 = tempCaso.getDescricao().substring(0,105) + "...";
+            txt_subtitulo.setText(temp1);
         }else{
             txt_subtitulo.setText(tempCaso.getDescricao());
         }

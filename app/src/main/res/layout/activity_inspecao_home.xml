@@ -13,7 +13,7 @@
         android:layout_height="match_parent">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar_inspecao"
+            android:id="@+id/toolbar_inspecao_casoView"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/purple_500"
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar_inspecao">
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_inspecao_casoView">
 
             <TextView
                 android:id="@+id/txt_inspecao_email"
@@ -38,7 +38,7 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="16dp"
                 android:text="@string/emailexemplo_exemplemail_com"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_inspecao_nome" />
@@ -50,7 +50,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:text="@string/dados_da_obra"
-                android:textSize="14sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -62,7 +62,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/dados_do_cliente"
-                android:textSize="14sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_inspecao_codigoPostal" />
@@ -75,7 +75,7 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="16dp"
                 android:text="@string/_351_915592811"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_inspecao_email" />
@@ -88,7 +88,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:text="@string/rua_do_exemplo_1234"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView28" />
@@ -101,7 +101,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:text="@string/senhor_exemplo_do_exemplar_de_nome_completo"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView32" />
@@ -114,7 +114,7 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="16dp"
                 android:text="@string/localidade_exemplo"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_inspecao_morada" />
@@ -127,17 +127,34 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="16dp"
                 android:text="@string/_1234_123"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_inspecao_localidade" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="Lista de Casos:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_inspecao_telefone" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <ListView
             android:id="@+id/lv_casos"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginBottom="5dp"
             android:headerDividersEnabled="false"
             app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"

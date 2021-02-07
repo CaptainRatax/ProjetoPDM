@@ -2,7 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
-
+<!--
+    <group android:id="@+id/menu_top_home"
+    android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_sync_home"
+            android:icon="@drawable/ic_baseline_sync_24"
+            android:title="@string/sincronizar_dados" />
+    </group>
+-->
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
@@ -12,10 +20,6 @@
             android:id="@+id/nav_qrcode"
             android:icon="@drawable/ic_baseline_qr_code_scanner_24"
             android:title="@string/ler_c_digo_qr" />
-        <item
-            android:id="@+id/nav_profile"
-            android:icon="@drawable/ic_baseline_person_24"
-            android:title="@string/perfil" />
         <item
             android:id="@+id/nav_logout"
             android:icon="@drawable/ic_baseline_exit_to_app_24"

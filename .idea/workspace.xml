@@ -4,15 +4,15 @@
     <shared>
       <config>
         <device id="pixel" />
-        <device id="pixel_4_xl" />
+        <device id="pixel_3a_xl" />
+        <device id="Nexus 6" />
+        <device id="Nexus 5X" />
         <device id="pixel_2" />
+        <device id="pixel_4_xl" />
         <device id="pixel_3" />
         <device id="pixel_3_xl" />
         <device id="pixel_2_xl" />
-        <device id="Nexus 6" />
         <device id="pixel_xl" />
-        <device id="Nexus 7" />
-        <device id="Nexus 6P" />
       </config>
     </shared>
   </component>
@@ -39,24 +39,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abd897be-6228-44d7-91e1-629969c98952" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/Activities/FinalizarInspecaoActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/Activities/InspecaoHomeActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/models/Caso.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/models/CustomAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/models/Fotografia.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/deleteleft.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_add_circle_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_cancel_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_check_circle_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_delete_forever_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_file_upload_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_image_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_image_not_supported_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_adicionar_caso.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_finalizar_inspecao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/single_item.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_inspecao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_synnapps_carouselview_0_1_5_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/release/app-release.apk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/release/output-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/models/DeleteCasosSynced.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/models/IsDataSynced.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/server/MyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_sync_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_sync_problem_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_caso_view.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
@@ -67,35 +58,69 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/Projeto_PDM_Grupo_3.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/Projeto_PDM_Grupo_3.app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/classes.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex_archive_input_jar_hashes/debug/out" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex_archive_input_jar_hashes/debug/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/merge-state" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Api.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/BaseDadosLocal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/ConfirmaObraActivity$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/ConfirmaObraActivity$2$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/ConfirmaObraActivity$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/ConfirmaObraActivity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/HomeActivity$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/HomeActivity$2$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/HomeActivity$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/HomeActivity$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/HomeActivity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/InspecaoHomeActivity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/LoginActivity$1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/LoginActivity$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/LoginActivity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/ProfileActivity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/QrCodeReaderActivity$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/QrCodeReaderActivity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/RetrofitClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$14.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$15.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$16.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$17.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$17.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$18.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$18.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$19.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$19.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$20.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$20.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$AsyncLoading.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/ConfirmaObraActivity$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/ConfirmaObraActivity$2$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/ConfirmaObraActivity$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/ConfirmaObraActivity$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/ConfirmaObraActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/ConfirmaObraActivity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/FinalizarInspecaoActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/FinalizarInspecaoActivity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/HomeActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/HomeActivity$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/HomeActivity$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/HomeActivity$2$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/HomeActivity$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/HomeActivity$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/HomeActivity$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/HomeActivity$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/HomeActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/HomeActivity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/InspecaoHomeActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/InspecaoHomeActivity$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/InspecaoHomeActivity$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/InspecaoHomeActivity$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/InspecaoHomeActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/InspecaoHomeActivity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/LoginActivity$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/LoginActivity$1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/LoginActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/LoginActivity$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/LoginActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/LoginActivity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/ProfileActivity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/QrCodeReaderActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/Activities/QrCodeReaderActivity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/models/Caso.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/models/Caso.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/models/CustomAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/models/CustomAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/models/RegistoHoras.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/models/RegistoHoras.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/server/Api.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/server/Api.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/server/BaseDadosLocal.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/projetopdmgrupo3/server/BaseDadosLocal.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifest/debug/out/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifest/debug/out/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" afterDir="false" />
@@ -106,44 +131,68 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/single/debug.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/packaged_manifests/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/packaged_manifests/debug/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/1e212815e2fcfe2b5db3a06c9d1d4a4267608506214102f041b0096236034a54_0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/1e212815e2fcfe2b5db3a06c9d1d4a4267608506214102f041b0096236034a54_1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/1e212815e2fcfe2b5db3a06c9d1d4a4267608506214102f041b0096236034a54_10.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/1e212815e2fcfe2b5db3a06c9d1d4a4267608506214102f041b0096236034a54_11.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/1e212815e2fcfe2b5db3a06c9d1d4a4267608506214102f041b0096236034a54_2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/1e212815e2fcfe2b5db3a06c9d1d4a4267608506214102f041b0096236034a54_3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/1e212815e2fcfe2b5db3a06c9d1d4a4267608506214102f041b0096236034a54_4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/1e212815e2fcfe2b5db3a06c9d1d4a4267608506214102f041b0096236034a54_5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/1e212815e2fcfe2b5db3a06c9d1d4a4267608506214102f041b0096236034a54_6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/1e212815e2fcfe2b5db3a06c9d1d4a4267608506214102f041b0096236034a54_7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/1e212815e2fcfe2b5db3a06c9d1d4a4267608506214102f041b0096236034a54_8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/1e212815e2fcfe2b5db3a06c9d1d4a4267608506214102f041b0096236034a54_9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Api.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/BaseDadosLocal.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/ConfirmaObraActivity$1.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/ConfirmaObraActivity$2$1.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/ConfirmaObraActivity$2.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/ConfirmaObraActivity.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/HomeActivity$1.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/HomeActivity$2$1.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/HomeActivity$2.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/HomeActivity$3.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/HomeActivity.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/InspecaoHomeActivity.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/LoginActivity$1$1.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/LoginActivity$1.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/LoginActivity.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/ProfileActivity.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/QrCodeReaderActivity$1.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/QrCodeReaderActivity.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/RetrofitClient.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout-land_activity_confirma_obra.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout-land_activity_confirma_obra.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_confirma_obra.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_confirma_obra.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_home.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_home.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ab84c8038d71de2c142c2eead9bd136e8ba514f86cf67621bc716e554743dc55_0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ab84c8038d71de2c142c2eead9bd136e8ba514f86cf67621bc716e554743dc55_1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ab84c8038d71de2c142c2eead9bd136e8ba514f86cf67621bc716e554743dc55_10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ab84c8038d71de2c142c2eead9bd136e8ba514f86cf67621bc716e554743dc55_11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ab84c8038d71de2c142c2eead9bd136e8ba514f86cf67621bc716e554743dc55_2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ab84c8038d71de2c142c2eead9bd136e8ba514f86cf67621bc716e554743dc55_3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ab84c8038d71de2c142c2eead9bd136e8ba514f86cf67621bc716e554743dc55_4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ab84c8038d71de2c142c2eead9bd136e8ba514f86cf67621bc716e554743dc55_5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ab84c8038d71de2c142c2eead9bd136e8ba514f86cf67621bc716e554743dc55_6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ab84c8038d71de2c142c2eead9bd136e8ba514f86cf67621bc716e554743dc55_7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ab84c8038d71de2c142c2eead9bd136e8ba514f86cf67621bc716e554743dc55_8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ab84c8038d71de2c142c2eead9bd136e8ba514f86cf67621bc716e554743dc55_9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$10.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$10.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$11.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$11.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$12.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$12.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$13.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$13.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$14.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$14.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$15.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$15.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$16.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$16.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$17.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$17.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$18.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$18.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$19.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$19.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$20.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$20.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$3.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$3.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$4.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$4.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$5.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$5.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$6.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$6.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$7.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$7.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$8.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$8.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$9.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$9.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity$AsyncLoading.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/ConfirmaObraActivity$2$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/ConfirmaObraActivity$2$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/ConfirmaObraActivity$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/ConfirmaObraActivity$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/ConfirmaObraActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/ConfirmaObraActivity.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/FinalizarInspecaoActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/FinalizarInspecaoActivity.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/HomeActivity$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/HomeActivity$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/HomeActivity$2$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/HomeActivity$2$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/HomeActivity$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/HomeActivity$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/HomeActivity$3.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/HomeActivity$3.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/HomeActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/HomeActivity.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/InspecaoHomeActivity$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/InspecaoHomeActivity$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/InspecaoHomeActivity$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/InspecaoHomeActivity$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/InspecaoHomeActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/InspecaoHomeActivity.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/LoginActivity$1$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/LoginActivity$1$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/LoginActivity$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/LoginActivity$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/LoginActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/LoginActivity.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/ProfileActivity.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/QrCodeReaderActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/Activities/QrCodeReaderActivity.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/models/Caso.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/models/Caso.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/models/CustomAdapter.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/models/CustomAdapter.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/models/RegistoHoras.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/models/RegistoHoras.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/server/Api.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/server/Api.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/server/BaseDadosLocal.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/projetopdmgrupo3/server/BaseDadosLocal.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_adicionar_caso.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_adicionar_caso.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_finalizar_inspecao.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_finalizar_inspecao.xml.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_inspecao_home.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_inspecao_home.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_login.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_login.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_profile.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_profile.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_qr_code_reader.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_qr_code_reader.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_profile.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_single_item.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_single_item.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/menu_menu.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/menu_menu.xml.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-night-v8_values-night-v8.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-night-v8_values-night-v8.arsc.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-v21_values-v21.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-v21_values-v21.arsc.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values_values.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values_values.arsc.flat" afterDir="false" />
@@ -153,22 +202,24 @@
       <change beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/compileDebugJavaWithJavac/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileDebugJavaWithJavac/source-classes-mapping.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/Api.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/server/Api.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/BaseDadosLocal.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/server/BaseDadosLocal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/ConfirmaObraActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/Activities/ConfirmaObraActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/HomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/Activities/HomeActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/InspecaoHomeActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/Activities/LoginActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/ProfileActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/Activities/ProfileActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/QrCodeReaderActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/Activities/QrCodeReaderActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/RetrofitClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/server/RetrofitClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_confirma_obra.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_confirma_obra.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_confirma_obra.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_confirma_obra.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/Activities/AdicionarCasoActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/Activities/ConfirmaObraActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/Activities/ConfirmaObraActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/Activities/FinalizarInspecaoActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/Activities/FinalizarInspecaoActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/Activities/HomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/Activities/HomeActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/Activities/InspecaoHomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/Activities/InspecaoHomeActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/Activities/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/Activities/LoginActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/Activities/ProfileActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/Activities/CasoViewActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/models/Caso.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/models/Caso.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/models/CustomAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/models/CustomAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/models/RegistoHoras.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/models/RegistoHoras.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/server/Api.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/server/Api.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/server/BaseDadosLocal.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetopdmgrupo3/server/BaseDadosLocal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_adicionar_caso.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_adicionar_caso.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_finalizar_inspecao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_finalizar_inspecao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_inspecao_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_inspecao_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_qr_code_reader.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_qr_code_reader.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/single_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/single_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-night/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values-v21/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-v21/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
@@ -178,7 +229,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[181846V01511541]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -196,6 +247,11 @@
       </list>
     </option>
   </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="C:\Users\ratax\Downloads\asdasdasd.jks" />
+    <option name="KEY_ALIAS" value="key0" />
+    <option name="BUILD_TARGET_KEY" value="apk" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -209,6 +265,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ApkExportedModule" value="Projeto_PDM_Grupo_3.app" />
+    <property name="ExportApk.ApkPath" value="C:\Users\ratax\AndroidStudioProjects\ProjetoPDMGrupo3\app" />
+    <property name="ExportApk.BuildVariants" value="release" />
+    <property name="ExportApk.SignV2" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -219,16 +279,20 @@
     <property name="multi-representation-previewC:/Users/ratax/AppData/Local/Android/Sdk/sources/android-28/android/view/View.java_selected" value="Custom views" />
   </component>
   <component name="RecentsManager">
+    <key name="android.template.-955031128">
+      <recent name="com.example.projetopdmgrupo3" />
+      <recent name="com.example.projetopdmgrupo3.Activities" />
+    </key>
     <key name="android.template.-107603155">
       <recent name="com.example.projetopdmgrupo3" />
     </key>
     <key name="android.template.1037504180">
       <recent name="com.example.projetopdmgrupo3" />
     </key>
-    <key name="android.template.2045741282">
+    <key name="android.template.-1555091599">
       <recent name="com.example.projetopdmgrupo3" />
     </key>
-    <key name="android.template.-1555091599">
+    <key name="android.template.2045741282">
       <recent name="com.example.projetopdmgrupo3" />
     </key>
   </component>
@@ -327,66 +391,70 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="261" key="#com.intellij.ide.util.MemberChooser" timestamp="1612572819960">
+    <state x="765" y="261" key="#com.intellij.ide.util.MemberChooser" timestamp="1612650792408">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="765" y="261" key="#com.intellij.ide.util.MemberChooser/0.30.1920.1050@0.30.1920.1050" timestamp="1612572819960" />
+    <state x="765" y="261" key="#com.intellij.ide.util.MemberChooser/0.30.1920.1050@0.30.1920.1050" timestamp="1612650792408" />
     <state x="609" y="264" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1612025846004">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="609" y="264" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1612025846004" />
-    <state x="606" y="275" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1612570597442">
+    <state x="606" y="275" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1612654754405">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="606" y="275" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1612570597442" />
-    <state x="456" y="283" key="AndroidCreateResourceFileDialog" timestamp="1612568833258">
+    <state x="606" y="275" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1612654754405" />
+    <state x="456" y="283" key="AndroidCreateResourceFileDialog" timestamp="1612644400906">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="456" y="283" key="AndroidCreateResourceFileDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1612568833258" />
-    <state x="721" y="318" key="AndroidCreateXmlResourceDialog" timestamp="1612569060013">
+    <state x="456" y="283" key="AndroidCreateResourceFileDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1612644400906" />
+    <state x="721" y="318" key="AndroidCreateXmlResourceDialog" timestamp="1612644583734">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="721" y="318" key="AndroidCreateXmlResourceDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1612569060013" />
+    <state x="721" y="318" key="AndroidCreateXmlResourceDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1612644583734" />
     <state x="758" y="301" key="AndroidProcessChooserDialog" timestamp="1612563121997">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="758" y="301" key="AndroidProcessChooserDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1612563121997" />
-    <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1612561936983">
+    <state width="468" height="466" key="DebuggerActiveHint" timestamp="1612634872149">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="740" y="295" key="FileChooserDialogImpl/0.30.1920.1050@0.30.1920.1050" timestamp="1612561936983" />
-    <state width="1876" height="278" key="GridCell.Tab.0.bottom" timestamp="1612563865631">
+    <state width="468" height="466" key="DebuggerActiveHint/0.30.1920.1050@0.30.1920.1050" timestamp="1612634872149" />
+    <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1612660882092">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1876" height="278" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1612563865631" />
-    <state width="1876" height="278" key="GridCell.Tab.0.center" timestamp="1612563865631">
+    <state x="740" y="295" key="FileChooserDialogImpl/0.30.1920.1050@0.30.1920.1050" timestamp="1612660882092" />
+    <state width="1876" height="242" key="GridCell.Tab.0.bottom" timestamp="1612660773890">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1876" height="278" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1612563865631" />
-    <state width="1876" height="278" key="GridCell.Tab.0.left" timestamp="1612563865630">
+    <state width="1876" height="242" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1612660773890" />
+    <state width="1876" height="242" key="GridCell.Tab.0.center" timestamp="1612660773890">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1876" height="278" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1612563865630" />
-    <state width="1876" height="278" key="GridCell.Tab.0.right" timestamp="1612563865631">
+    <state width="1876" height="242" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1612660773890" />
+    <state width="1876" height="242" key="GridCell.Tab.0.left" timestamp="1612660773889">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1876" height="278" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1612563865631" />
-    <state width="1876" height="278" key="GridCell.Tab.1.bottom" timestamp="1612563865631">
+    <state width="1876" height="242" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1612660773889" />
+    <state width="1876" height="242" key="GridCell.Tab.0.right" timestamp="1612660773890">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1876" height="278" key="GridCell.Tab.1.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1612563865631" />
-    <state width="1876" height="278" key="GridCell.Tab.1.center" timestamp="1612563865631">
+    <state width="1876" height="242" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1612660773890" />
+    <state width="1876" height="278" key="GridCell.Tab.1.bottom" timestamp="1612657962777">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1876" height="278" key="GridCell.Tab.1.center/0.30.1920.1050@0.30.1920.1050" timestamp="1612563865631" />
-    <state width="1876" height="278" key="GridCell.Tab.1.left" timestamp="1612563865631">
+    <state width="1876" height="278" key="GridCell.Tab.1.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1612657962777" />
+    <state width="1876" height="278" key="GridCell.Tab.1.center" timestamp="1612657962777">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1876" height="278" key="GridCell.Tab.1.left/0.30.1920.1050@0.30.1920.1050" timestamp="1612563865631" />
-    <state width="1876" height="278" key="GridCell.Tab.1.right" timestamp="1612563865631">
+    <state width="1876" height="278" key="GridCell.Tab.1.center/0.30.1920.1050@0.30.1920.1050" timestamp="1612657962777" />
+    <state width="1876" height="278" key="GridCell.Tab.1.left" timestamp="1612657962777">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1876" height="278" key="GridCell.Tab.1.right/0.30.1920.1050@0.30.1920.1050" timestamp="1612563865631" />
+    <state width="1876" height="278" key="GridCell.Tab.1.left/0.30.1920.1050@0.30.1920.1050" timestamp="1612657962777" />
+    <state width="1876" height="278" key="GridCell.Tab.1.right" timestamp="1612657962777">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1876" height="278" key="GridCell.Tab.1.right/0.30.1920.1050@0.30.1920.1050" timestamp="1612657962777" />
     <state width="968" height="533" key="XDebugger.FullValuePopup" timestamp="1612563478819">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
